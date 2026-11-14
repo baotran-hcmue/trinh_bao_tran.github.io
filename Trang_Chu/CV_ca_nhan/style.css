@@ -1,1 +1,216 @@
+/* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: #fff0f5;
+    color: #4a3b42;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+    line-height: 1.55;
+}
+
+/* Khung CV chính chia 2 cột 40% - 60% */
+.cv-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(244, 143, 177, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* ================= CỘT TRÁI (40%) ================= */
+.left-column {
+    width: 40%;
+    background-color: #ffd6e0;
+    color: #4a353d;
+    padding: 32px 24px;
+}
+
+/* Khung ảnh đại diện nhỏ gọn 95x95px đặt góc trên bên trái */
+.avatar-box {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 95px;
+    height: 95px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 3px 10px rgba(216, 112, 147, 0.25);
+    display: block;
+}
+
+.left-section {
+    margin-bottom: 22px;
+}
+
+.left-section h2 {
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    color: #9e3b5a;
+    border-bottom: 2px solid #f7a8b8;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 13.5px;
+    text-align: justify;
+}
+
+/* Danh sách liên hệ */
+.contact-list {
+    list-style: none;
+    font-size: 13.5px;
+}
+
+.contact-list li {
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    word-break: break-word;
+}
+
+.contact-list i {
+    color: #c94c72;
+    width: 16px;
+    text-align: center;
+}
+
+/* Thanh kỹ năng */
+.skill-item {
+    margin-bottom: 11px;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #ffeef2;
+    border-radius: 10px;
+    margin-top: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #e06c8e;
+    border-radius: 10px;
+}
+
+/* Sở thích */
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.hobbies span {
+    background-color: #fff5f7;
+    color: #9e3b5a;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 500;
+    border: 1px solid #f7a8b8;
+}
+
+/* ================= CỘT PHẢI (60%) ================= */
+.right-column {
+    width: 60%;
+    padding: 35px 32px;
+    background-color: #ffffff;
+}
+
+.header-box {
+    border-bottom: 2px solid #ffd6e0;
+    padding-bottom: 16px;
+    margin-bottom: 22px;
+}
+
+.header-box h1 {
+    font-size: 26px;
+    color: #c94c72;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.header-box .subtitle {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #8c6d79;
+    letter-spacing: 0.8px;
+}
+
+.right-section {
+    margin-bottom: 24px;
+}
+
+.right-section h2 {
+    font-size: 16px;
+    color: #c94c72;
+    border-bottom: 2px solid #ffe4ec;
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-item {
+    margin-bottom: 15px;
+    padding-left: 13px;
+    border-left: 3px solid #f7a8b8;
+}
+
+.timeline-item .time {
+    display: inline-block;
+    background-color: #ffe4ec;
+    color: #9e3b5a;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 12px;
+    margin-bottom: 4px;
+}
+
+.timeline-item h3 {
+    font-size: 15px;
+    color: #3d2b33;
+}
+
+.timeline-item .role {
+    font-size: 12.5px;
+    font-style: italic;
+    color: #b55d78;
+    margin-bottom: 4px;
+}
+
+.timeline-item p {
+    font-size: 13.5px;
+    color: #5c4b52;
+}
+
+/* Tương thích màn hình điện thoại */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
