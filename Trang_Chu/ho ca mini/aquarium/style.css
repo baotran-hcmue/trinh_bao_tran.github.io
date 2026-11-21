@@ -53,19 +53,19 @@ body, html {
     will-change: left, top, transform;
 }
 
-/* Cá mập, Rùa và Tiên cá thu nhỏ thật nhỏ lại */
+/* Cá mập, Rùa và Tiên cá to gấp đôi */
 #shark {
-    width: 65px;
+    width: 130px;
     z-index: 12;
 }
 
 #turtle {
-    width: 45px;
+    width: 90px;
     z-index: 14;
 }
 
 #tienca {
-    width: 60px;
+    width: 120px;
     z-index: 15;
 }
 
@@ -74,20 +74,26 @@ body, html {
     z-index: 13;
 }
 
-/* Các đàn cá khác cá mập bự lên */
+/* Các đàn cá nhỏ lại 1 nửa */
 .school-xam {
-    width: 300px;
+    width: 150px;
     z-index: 8;
 }
 
 .school-xanh {
-    width: 290px;
+    width: 145px;
     z-index: 9;
 }
 
 .school-vang {
-    width: 280px;
+    width: 140px;
     z-index: 10;
+}
+
+/* 3 Thợ lặn */
+.diver {
+    width: 105px;
+    z-index: 11;
 }
 
 /* 3 Thợ lặn */
