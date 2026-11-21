@@ -95,6 +95,11 @@ body, html {
     width: 105px;
     z-index: 11;
 }
+/* Tàu ngầm lặn gần đáy */
+#taungam {
+    width: 220px;
+    z-index: 6;
+}
 
 /* 3 Thợ lặn */
 .diver {
