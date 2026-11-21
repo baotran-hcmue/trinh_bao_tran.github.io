@@ -6,130 +6,90 @@
     <title>CV Cá Nhân - Trịnh Bảo Trân</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS trang trí hoa và thỏ (không làm ảnh hưởng bố cục gốc) -->
+    <style>
+        .cv-container {
+            position: relative; /* Làm điểm tựa để ghim họa tiết vào các góc CV */
+        }
+
+        .avatar-box {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Đôi tai thỏ lấp ló phía trên ảnh đại diện */
+        .deco-bunny-ears {
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 28px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Cành hoa đào góc trên bên phải */
+        .deco-top-right {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            width: 150px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Đôi thỏ trắng nâu & bụi hoa góc dưới bên trái */
+        .deco-bottom-left {
+            position: absolute;
+            bottom: -10px;
+            left: -15px;
+            width: 170px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Bé thỏ trắng ngồi góc dưới bên phải */
+        .deco-bottom-right {
+            position: absolute;
+            bottom: -8px;
+            right: -10px;
+            width: 95px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Hoa nhỏ điểm xuyết cạnh tiêu đề */
+        .deco-inline-flower {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 6px;
+            margin-top: -4px;
+        }
+    </style>
 </head>
 <body>
 
     <div class="cv-container">
-        <!-- CỘT TRÁI (Tỉ lệ 40%) -->
-        <aside class="left-column">
-            <!-- Ảnh đại diện hình tròn nhỏ gọn ở góc trái -->
-            <div class="avatar-box">
-                <img src="btr.png" alt="Trịnh Bảo Trân" class="avatar" style="width: 95px; height: 95px; border-radius: 50%; object-fit: cover;">
-            </div>
-
-            <!-- Giới thiệu bản thân -->
-            <section class="left-section">
-                <h2>GIỚI THIỆU</h2>
-                <p>
-                    Xin chào! Mình là Trịnh Bảo Trân, hiện đang là sinh viên ngành Công nghệ Thông tin lớp CNTT A tại Trường Đại học Sư phạm TP. Hồ Chí Minh. Mình yêu thích công nghệ, chụp ảnh và sáng tạo trong lĩnh vực Graphic &amp; Digital Design.
-                </p>
-            </section>
-
-            <!-- Thông tin liên hệ -->
-            <section class="left-section">
-                <h2>LIÊN HỆ</h2>
-                <ul class="contact-list">
-                    <li><i class="fa-solid fa-phone"></i> 0777 101 336</li>
-                    <li><i class="fa-solid fa-envelope"></i> trinhbaotran2907@gmail.com</li>
-                    <li><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh, Việt Nam</li>
-                </ul>
-            </section>
-
-            <!-- Kỹ năng -->
-            <section class="left-section">
-                <h2>KỸ NĂNG</h2>
-                <div class="skill-item">
-                    <span>Microsoft Office (Word, Excel, PowerPoint)</span>
-                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>CapCut &amp; Alight Motion</span>
-                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>Graphic &amp; Digital Design</span>
-                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>HTML &amp; CSS cơ bản</span>
-                    <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-                </div>
-            </section>
-
-            <!-- Sở thích -->
-            <section class="left-section">
-                <h2>SỞ THÍCH</h2>
-                <div class="hobbies">
-                    <span><i class="fa-solid fa-laptop-code"></i> Công nghệ</span>
-                    <span><i class="fa-solid fa-camera-retro"></i> Chụp ảnh</span>
-                    <span><i class="fa-solid fa-palette"></i> Graphic Design</span>
-                </div>
-            </section>
-        </aside>
-
-        <!-- CỘT PHẢI (Tỉ lệ 60%) -->
-        <main class="right-column">
-            <!-- Họ tên & Vị trí -->
-            <header class="header-box">
-                <h1>TRỊNH BẢO TRÂN</h1>
-                <p class="subtitle">SINH VIÊN CÔNG NGHỆ THÔNG TIN</p>
-            </header>
-
-            <!-- Học vấn -->
-            <section class="right-section">
-                <h2><i class="fa-solid fa-graduation-cap"></i> HỌC VẤN</h2>
-                <div class="timeline-item">
-                    <span class="time">2026 - Hiện tại</span>
-                    <h3>Trường Đại học Sư phạm TP. Hồ Chí Minh (HCMUE)</h3>
-                    <p class="role">Sinh viên ngành Công nghệ Thông tin</p>
-                    <p>Học tập và rèn luyện kiến thức nền tảng về lập trình, thiết kế web và ứng dụng công nghệ số.</p>
-                </div>
-            </section>
-
-            <!-- Dự án cá nhân -->
-            <section class="right-section">
-                <h2><i class="fa-solid fa-folder-open"></i> DỰ ÁN CÁ NHÂN</h2>
-                
-                <div class="timeline-item">
-                    <span class="time">2026</span>
-                    <h3>Bài thiết kế Web cuối kỳ môn Thiết kế Web</h3>
-                    <p class="role">Giảng viên hướng dẫn: Thầy Lương Trần Hy Hiến</p>
-                    <p>Xây dựng website hoàn chỉnh tổng hợp kiến thức HTML5, CSS3, bố cục giao diện trực quan và tối ưu trải nghiệm người dùng.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="time">2026</span>
-                    <h3>Thiết kế Website Hồ Cá</h3>
-                    <p class="role">Bài tập cá nhân - Môn Thiết kế Web</p>
-                    <p>Thiết kế giao diện trang web động hồ cá từ các hình có sắn/ tự tìm kiếm bằng CSS3.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="time">2026</span>
-                    <h3>Thiết kế Website Cá Nhân (CV Online)</h3>
-                    <p class="role">Bài tập cá nhân - Môn Thiết kế Web</p>
-                    <p>Xây dựng trang CV trực tuyến có sử dụng các ký hiệu đặc biệt, bố cục layout có các thông tin theo yêu cầu của mẫu cho trước.</p>
-                </div>
-            </section>
-
-            <!-- Kinh nghiệm -->
-            <section class="right-section">
-                <h2><i class="fa-solid fa-briefcase"></i> KINH NGHIỆM &amp; KỸ NĂNG THỰC HÀNH</h2>
-                
-                <div class="timeline-item">
-                    <span class="time">Dựng video &amp; Thuyết trình</span>
-                    <h3>Biên tập Clip thuyết trình bằng CapCut &amp; Alight Motion</h3>
-                    <p>Có kinh nghiệm cắt ghép, chèn hiệu ứng chuyển cảnh, keyframe cơ bản và đồng bộ âm thanh để tạo các video thuyết trình thu hút, sinh động.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="time">Tin học văn phòng</span>
-                    <h3>Thành thạo 3 ứng dụng cơ bản của Microsoft Office</h3>
-                    <p>Sử dụng thành thạo <strong>Word</strong> (soạn thảo, căn chỉnh văn bản chuẩn chỉnh), <strong>PowerPoint</strong> (thiết kế slide thuyết trình thẩm mỹ) và <strong>Excel</strong> (xử lý bảng tính, hàm cơ bản).</p>
-                </div>
-            </section>
-        </main>
-    </div>
-
-</body>
-</html>
+        
+        <!-- HỌA TIẾT 1: Cành hoa & thỏ nâu góc trên bên phải -->
+        <svg class="deco-top-right" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cành cây -->
+            <path d="M200 15 Q140 35 90 25 T20 45" stroke="#7A5C43" stroke-width="3" stroke-linecap="round"/>
+            <path d="M130 28 Q110 55 85 65" stroke="#7A5C43" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Lá xanh -->
+            <ellipse cx="75" cy="24" rx="8" ry="4" transform="rotate(-20 75 24)" fill="#A8D5BA" stroke="#5A4A42" stroke-width="1.2"/>
+            <ellipse cx="115" cy="48" rx="8" ry="4" transform="rotate(30 115 48)" fill="#A8D5BA" stroke="#5A4A42" stroke-width="1.2"/>
+            <ellipse cx="45" cy="36" rx="7" ry="3.5" transform="rotate(-15 45 36)" fill="#A8D5BA" stroke="#5A4A42" stroke-width="1.2"/>
+            <!-- Hoa hồng pastel -->
+            <g transform="translate(88, 22)">
+                <circle cx="0" cy="-7" r="6" fill="#FFD1DC" stroke="#5A4A42" stroke-width="1.2"/>
+                <circle cx="7" cy="-2" r="6" fill="#FFD1DC" stroke="#5A4A42" stroke-width="1.2"/>
+                <circle cx="4" cy="6" r="6" fill="#FFD1DC" stroke="#5A4A42" stroke-width="1.2"/>
+                <circle cx="-4" cy="6" r="6" fill="#FFD1DC" stroke="#5A4A42" stroke-width="1.2"/>
+                <circle cx="-7" cy="-2" r="6" fill="#FFD1DC" stroke="#5A4A42" stroke-width="1.2"/>
+                <circle cx="0" cy="0" r="4" fill="#FFF3B0" stroke="#5A4A42" stroke-width="1"/>
+            </g>
+            <g transform="translate(30, 44) scale(0.85)">
+                <circle cx="0" cy="-7" r="6" fill="#FFE4E1" stroke="#5A4A42" stroke-width
