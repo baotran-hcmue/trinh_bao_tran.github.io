@@ -3,63 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - Trịnh Bảo Trân</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffe6f0; /* Nền hồng pastel */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 45px 55px;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #d63384;
-            font-size: 32px;
-            margin: 0 0 12px 0;
-        }
-        p {
-            color: #555555;
-            font-size: 18px;
-            margin: 0 0 30px 0;
-        }
-        .button-group {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-        .btn {
-            text-decoration: none;
-            background-color: #ff85a2;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .btn:hover {
-            background-color: #e05780;
-            transform: translateY(-3px);
-        }
-    </style>
+    <title>Hồ Cá Thủy Cung</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Trịnh Bảo Trân</h1>
-        <p>Bạn muốn xem trang web nào?</p>
-        <div class="button-group">
-            <a href="CV_ca_nhan/index.html" class="btn">CV Cá Nhân</a>
-            <a href="ho ca mini/aquarium/index.html" class="btn">Hồ Cá Mini</a>
-        </div>
+    <div id="aquarium">
+        <!-- Nút điều khiển âm thanh -->
+        <button id="music-btn" onclick="toggleMusic()">🔇 Bật nhạc thủy cung</button>
+        <audio id="bg-music" src="thuycung.mp3" loop></audio>
+
+        <!-- Tiên cá, Rùa, Cá mập, Bạch tuộc -->
+        <img src="tienca.png" id="tienca" class="creature" alt="Tiên cá">
+        <img src="turtle.png" id="turtle" class="creature" alt="Rùa biển">
+        <img src="shark.png" id="shark" class="creature" alt="Cá mập">
+        <img src="bachtuot.png" id="bachtuot" class="creature" alt="Bạch tuộc">
+
+        <!-- 3 Thợ lặn di chuyển lên xuống & đụng tường lật trái/phải -->
+        <img src="diver1.png" id="diver1" class="creature diver" style="top: 25%; left: 15%;" alt="Thợ lặn 1">
+        <img src="diver2.png" id="diver2" class="creature diver" style="top: 45%; left: 48%;" alt="Thợ lặn 2">
+        <img src="diver3.png" id="diver3" class="creature diver" style="top: 30%; left: 78%;" alt="Thợ lặn 3">
+
+        <!-- Đàn cá xám (Gốc: đầu trái, đuôi phải) -->
+        <img src="caxam.png" class="creature school-xam" style="top: 14%; left: 8%;" alt="Cá xám">
+        <img src="caxam.png" class="creature school-xam" style="top: 24%; left: 20%;" alt="Cá xám">
+        <img src="caxam.png" class="creature school-xam" style="top: 20%; left: 2%;" alt="Cá xám">
+
+        <!-- Đàn cá xanh (Gốc: đầu phải, đuôi trái) -->
+        <img src="caxanh.png" class="creature school-xanh" style="top: 46%; left: 60%;" alt="Cá xanh">
+        <img src="caxanh.png" class="creature school-xanh" style="top: 56%; left: 72%;" alt="Cá xanh">
+        <img src="caxanh.png" class="creature school-xanh" style="top: 52%; left: 48%;" alt="Cá xanh">
+
+        <!-- Đàn cá vàng (Gốc: đầu phải, đuôi trái) -->
+        <img src="cavang.png" class="creature school-vang" style="top: 68%; left: 22%;" alt="Cá vàng">
+        <img src="cavang.png" class="creature school-vang" style="top: 76%; left: 34%;" alt="Cá vàng">
+        <img src="cavang.png" class="creature school-vang" style="top: 72%; left: 12%;" alt="Cá vàng">
     </div>
+
+    <script>
+        // Bật/Tắt nhạc thủy cung
+        const music = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                musicBtn.innerHTML = '🔇 Bật nhạc thủy cung';
+            } else {
+                music.play();
+                musicBtn.innerHTML = '🔊 Tắt nhạc thủy cung';
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // Quản lý chuyển động & quay đầu khi đụng tường
+        const swimmers = [];
+
+        function registerSwimmer(el, config) {
+            swimmers.push({
+                el: el,
+                x: el.offsetLeft || Math.random() * (window.innerWidth - 150),
+                baseY: el.offsetTop || config.startY,
+                vx: config.vx, // Vận tốc ngang (+ sang phải, - sang trái)
+                defaultFace: config.defaultFace, // Hướng mặt ảnh gốc ('left' hoặc 'right')
+                bobAmp: config.bobAmp || 0, // Biên độ nhấp nhô lên xuống (px)
+                bobSpeed: config.bobSpeed || 0, // Tốc độ nhấp nhô
+                phase: config.phase || Math.random() * Math.PI * 2
+            });
+        }
+
+        window.addEventListener('load', () => {
+            const H = window.innerHeight;
+
+            // Tiên cá: bơi chậm rãi, nhấp nhô lên xuống ngao du ngắm cảnh (đầu gốc bên trái)
+            registerSwimmer(document.getElementById('tienca'), {
+                startY: H * 0.35, vx: -0.45, defaultFace: 'left', bobAmp: 32, bobSpeed: 0.015
+            });
+
+            // Rùa biển & Cá mập: cùng tốc độ chậm rãi
+            registerSwimmer(document.getElementById('turtle'), {
+                startY: H * 0.64, vx: 0.42, defaultFace: 'right', bobAmp: 10, bobSpeed: 0.012
+            });
+            registerSwimmer(document.getElementById('shark'), {
+                startY: H * 0.12, vx: 0.42, defaultFace: 'right', bobAmp: 8, bobSpeed: 0.012
+            });
+
+            // Bạch tuộc: đã sửa hướng mặt sang 'right' để không bị bơi ngược
+            registerSwimmer(document.getElementById('bachtuot'), {
+                startY: H * 0.78, vx: -0.35, defaultFace: 'right', bobAmp: 16, bobSpeed: 0.018
+            });
+
+            // 3 Thợ lặn: lặn lên xuống chậm rãi + trôi ngang đụng tường lật trái/phải
+            registerSwimmer(document.getElementById('diver1'), {
+                startY: H * 0.38, vx: 0.32, defaultFace: 'right', bobAmp: 130, bobSpeed: 0.012, phase: 0
+            });
+            registerSwimmer(document.getElementById('diver2'), {
+                startY: H * 0.45, vx: -0.28, defaultFace: 'right', bobAmp: 150, bobSpeed: 0.010, phase: 2.1
+            });
+            registerSwimmer(document.getElementById('diver3'), {
+                startY: H * 0.40, vx: 0.35, defaultFace: 'right', bobAmp: 140, bobSpeed: 0.013, phase: 4.2
+            });
+
+            // Đàn cá xám (đầu gốc bên trái) - bơi chậm rãi
+            document.querySelectorAll('.school-xam').forEach((el, idx) => {
+                registerSwimmer(el, {
+                    startY: el.offsetTop, vx: -0.62, defaultFace: 'left', bobAmp: 8, bobSpeed: 0.018, phase: idx * 0.8
+                });
+            });
+
+            // Đàn cá xanh (đầu gốc bên phải) - bơi chậm rãi
+            document.querySelectorAll('.school-xanh').forEach((el, idx) => {
+                registerSwimmer(el, {
+                    startY: el.offsetTop, vx: 0.65, defaultFace: 'right', bobAmp: 10, bobSpeed: 0.02, phase: idx * 0.7
+                });
+            });
+
+            // Đàn cá vàng (đầu gốc bên phải) - bơi chậm rãi
+            document.querySelectorAll('.school-vang').forEach((el, idx) => {
+                registerSwimmer(el, {
+                    startY: el.offsetTop, vx: 0.58, defaultFace: 'right', bobAmp: 7, bobSpeed: 0.018, phase: idx * 0.9
+                });
+            });
+
+            animate();
+        });
+
+        function animate() {
+            const screenW = window.innerWidth;
+            const screenH = window.innerHeight;
+
+            swimmers.forEach(s => {
+                s.x += s.vx;
+                s.phase += s.bobSpeed;
+
+                const elWidth = s.el.offsetWidth || 100;
+                const elHeight = s.el.offsetHeight || 100;
+
+                // Đụng tường phải -> quay đầu sang trái
+                if (s.x + elWidth >= screenW) {
+                    s.x = screenW - elWidth;
+                    s.vx = -Math.abs(s.vx);
+                }
+                // Đụng tường trái -> quay đầu sang phải
+                if (s.x <= 0) {
+                    s.x = 0;
+                    s.vx = Math.abs(s.vx);
+                }
+
+                // Tọa độ Y nhấp nhô và giữ không tràn khỏi mép trên/dưới
+                let currentY = s.baseY + Math.sin(s.phase) * s.bobAmp;
+                currentY = Math.max(10, Math.min(screenH - elHeight - 10, currentY));
+
+                // Lật hướng trái/phải theo hướng di chuyển
+                let scaleX = 1;
+                if (s.defaultFace === 'left') {
+                    scaleX = s.vx > 0 ? -1 : 1;
+                } else {
+                    scaleX = s.vx < 0 ? -1 : 1;
+                }
+
+                s.el.style.left = s.x + 'px';
+                s.el.style.top = currentY + 'px';
+                s.el.style.transform = `scaleX(${scaleX})`;
+            });
+
+            requestAnimationFrame(animate);
+        }
+    </script>
 </body>
 </html>
