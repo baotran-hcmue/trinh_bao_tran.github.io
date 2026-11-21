@@ -1,65 +1,209 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - Trịnh Bảo Trân</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffe6f0; /* Nền hồng pastel */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 45px 55px;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #d63384;
-            font-size: 32px;
-            margin: 0 0 12px 0;
-        }
-        p {
-            color: #555555;
-            font-size: 18px;
-            margin: 0 0 30px 0;
-        }
-        .button-group {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-        .btn {
-            text-decoration: none;
-            background-color: #ff85a2;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .btn:hover {
-            background-color: #e05780;
-            transform: translateY(-3px);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Trịnh Bảo Trân</h1>
-        <p>Bạn muốn xem trang web nào?</p>
-        <div class="button-group">
-            <a href="CV_ca_nhan/index.html" class="btn">CV Cá Nhân</a>
-            <a href="ho_ca_mini/index.html" class="btn">Hồ Cá Mini</a>
-        </div>
-    </div>
-</body>
-</html>
+/* ================= THIẾT LẬP CHUNG ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff5f7; /* Nền hồng phấn dịu mắt */
+    color: #4a3b3b;
+    display: flex;
+    justify-content: center;
+    padding: 45px 15px;
+    line-height: 1.6;
+}
+
+/* ================= KHUNG CV CHÍNH ================= */
+.cv-container {
+    position: relative;
+    width: 100%;
+    max-width: 920px;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(214, 138, 156, 0.22);
+    border: 2px solid #ffd6e0;
+    overflow: visible; /* Giữ nguyên để tai thỏ & hoa vươn nhẹ ra ngoài viền */
+}
+
+/* ================= CỘT TRÁI (40%) ================= */
+.left-column {
+    width: 40%;
+    background-color: #ffeaf0; /* Hồng baby pastel */
+    padding: 48px 30px 95px 30px; /* Chừa khoảng trống dưới đáy cho 2 bé thỏ */
+    border-radius: 18px 0 0 18px;
+    border-right: 1.5px dashed #f5b8c8;
+}
+
+.avatar-box {
+    position: relative;
+    display: block;
+    width: 105px;
+    margin: 12px auto 26px auto;
+    text-align: center;
+}
+
+.avatar {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(214, 120, 145, 0.28);
+    position: relative;
+    z-index: 3;
+}
+
+.left-section {
+    margin-bottom: 26px;
+}
+
+.left-section h2 {
+    font-size: 16px;
+    color: #b84a68;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #f7c2d0;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+.left-section p {
+    font-size: 14px;
+    text-align: justify;
+    color: #5c4949;
+}
+
+/* Danh sách liên hệ */
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    font-size: 13.5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    word-break: break-word;
+}
+
+.contact-list i {
+    color: #d66886;
+    width: 18px;
+    text-align: center;
+}
+
+/* Thanh kỹ năng */
+.skill-item {
+    margin-bottom: 14px;
+}
+
+.skill-item span {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #f7c2d0;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #f497b2, #d66886);
+    border-radius: 10px;
+}
+
+/* Sở thích */
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hobbies span {
+    background-color: #ffffff;
+    color: #b84a68;
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #f5b8c8;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ================= CỘT PHẢI (60%) ================= */
+.right-column {
+    width: 60%;
+    padding: 48px 38px 90px 38px; /* Chừa khoảng trống dưới đáy cho bé thỏ ngủ */
+}
+
+.header-box {
+    background-color: #fff6f8;
+    padding: 20px 24px;
+    border-radius: 14px;
+    border-left: 5px solid #e07a96;
+    margin-bottom: 28px;
+}
+
+.header-box h1 {
+    font-size: 26px;
+    color: #a83d5b;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.header-box .subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8c6d75;
+    letter-spacing: 1.5px;
+}
+
+.right-section {
+    margin-bottom: 26px;
+}
+
+.right-section h2 {
+    font-size: 17px;
+    color: #b84a68;
+    border-bottom: 2px solid #ffe0e8;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 18px;
+    border-left: 2px solid #f5b8c8;
+    margin-bottom: 18px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #e07a96;
+    border-radius: 50%;
+}
+
+.timeline-item .time {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
