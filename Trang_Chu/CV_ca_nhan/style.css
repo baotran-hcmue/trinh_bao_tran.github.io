@@ -1,4 +1,4 @@
-/* ================= THIẾT LẬP CHUNG CHO MÀN HÌNH PC ================= */
+/* ================= THIẾT LẬP CHUNG ================= */
 * {
     margin: 0;
     padding: 0;
@@ -9,33 +9,30 @@
 body {
     background-color: #fff5f7;
     color: #4a3b3b;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 50px 20px;
-    line-height: 1.65;
+    padding: 45px 15px;
+    line-height: 1.6;
 }
 
-/* ================= KHUNG CV 2 CỘT CHUẨN PC ================= */
+/* ================= KHUNG CV 2 CỘT ================= */
 .cv-container {
     position: relative;
-    width: 960px; /* Khổ rộng cố định chuẩn PC để không bị giãn hay co lệch sticker */
-    min-width: 960px;
+    width: 100%;
+    max-width: 920px;
     background-color: #ffffff;
     display: flex;
-    flex-direction: row;
     border-radius: 20px;
-    box-shadow: 0 14px 36px rgba(214, 138, 156, 0.22);
+    box-shadow: 0 12px 32px rgba(214, 138, 156, 0.22);
     border: 2px solid #ffd6e0;
     overflow: visible;
 }
 
-/* ================= CỘT TRÁI (38%) ================= */
+/* ================= CỘT TRÁI (40%) ================= */
 .left-column {
-    width: 38%;
+    width: 40%;
     background-color: #ffeaf0;
-    padding: 48px 32px 110px 32px; /* Chừa khoảng trống đáy cho bé thỏ & gà con */
+    padding: 45px 30px 95px 30px; /* Chừa khoảng trống đáy cho thỏ & gà con */
     border-radius: 18px 0 0 18px;
     border-right: 1.5px dashed #f5b8c8;
 }
@@ -43,49 +40,49 @@ body {
 .avatar-box {
     position: relative;
     display: block;
-    width: 110px;
-    margin: 14px auto 28px auto;
+    width: 100px;
+    margin: 12px auto 25px auto;
     text-align: center;
 }
 
 .avatar {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ffffff;
-    box-shadow: 0 5px 14px rgba(214, 120, 145, 0.28);
+    box-shadow: 0 4px 12px rgba(214, 120, 145, 0.28);
     position: relative;
     z-index: 3;
 }
 
 .left-section {
-    margin-bottom: 28px;
+    margin-bottom: 25px;
 }
 
 .left-section h2 {
-    font-size: 16.5px;
+    font-size: 16px;
     color: #b84a68;
     letter-spacing: 1px;
     border-bottom: 2px solid #f7c2d0;
     padding-bottom: 6px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .left-section p {
-    font-size: 14.5px;
+    font-size: 14px;
     text-align: justify;
     color: #5c4949;
 }
 
-/* Danh sách liên hệ */
+/* Liên hệ */
 .contact-list {
     list-style: none;
 }
 
 .contact-list li {
-    font-size: 14px;
-    margin-bottom: 11px;
+    font-size: 13.5px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -98,21 +95,21 @@ body {
     text-align: center;
 }
 
-/* Thanh kỹ năng */
+/* Kỹ năng */
 .skill-item {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .skill-item span {
     display: block;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 500;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .progress-bar {
     width: 100%;
-    height: 9px;
+    height: 8px;
     background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
@@ -129,15 +126,15 @@ body {
 .hobbies {
     display: flex;
     flex-wrap: wrap;
-    gap: 9px;
+    gap: 8px;
 }
 
 .hobbies span {
     background-color: #ffffff;
     color: #b84a68;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 500;
-    padding: 6px 13px;
+    padding: 6px 12px;
     border-radius: 20px;
     border: 1px solid #f5b8c8;
     display: inline-flex;
@@ -145,61 +142,61 @@ body {
     gap: 6px;
 }
 
-/* ================= CỘT PHẢI (62%) ================= */
+/* ================= CỘT PHẢI (60%) ================= */
 .right-column {
-    width: 62%;
-    padding: 48px 42px 100px 42px; /* Chừa khoảng trống đáy cho bé gà con & hoa */
+    width: 60%;
+    padding: 45px 38px 90px 38px; /* Chừa khoảng trống đáy cho bé gà con */
 }
 
 .header-box {
     background-color: #fff6f8;
-    padding: 22px 26px;
+    padding: 20px 24px;
     border-radius: 14px;
     border-left: 5px solid #e07a96;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .header-box h1 {
-    font-size: 28px;
+    font-size: 26px;
     color: #a83d5b;
     letter-spacing: 1px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .header-box .subtitle {
-    font-size: 14.5px;
+    font-size: 14px;
     font-weight: 600;
     color: #8c6d75;
     letter-spacing: 1.5px;
 }
 
 .right-section {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
 }
 
 .right-section h2 {
-    font-size: 17.5px;
+    font-size: 17px;
     color: #b84a68;
     border-bottom: 2px solid #ffe0e8;
-    padding-bottom: 7px;
-    margin-bottom: 18px;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
 }
 
 .timeline-item {
     position: relative;
-    padding-left: 20px;
+    padding-left: 18px;
     border-left: 2px solid #f5b8c8;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .timeline-item::before {
     content: "";
     position: absolute;
     left: -6px;
-    top: 6px;
+    top: 5px;
     width: 10px;
     height: 10px;
     background-color: #e07a96;
@@ -208,39 +205,39 @@ body {
 
 .timeline-item .time {
     display: inline-block;
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 600;
     color: #b84a68;
     background-color: #ffeaf0;
-    padding: 2px 11px;
+    padding: 2px 10px;
     border-radius: 12px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .timeline-item h3 {
-    font-size: 16px;
+    font-size: 15.5px;
     color: #3d2e2e;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .timeline-item .role {
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 600;
     color: #8c6d75;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .timeline-item p {
-    font-size: 14.2px;
+    font-size: 13.8px;
     color: #5c4949;
 }
 
-/* ================= VỊ TRÍ STICKER CHIBI TRÊN PC ================= */
+/* ================= VỊ TRÍ STICKER CHIBI ================= */
 .sticker-top-right {
     position: absolute;
-    top: -20px;
-    right: -14px;
-    width: 145px;
+    top: -18px;
+    right: -12px;
+    width: 135px;
     pointer-events: none;
     z-index: 10;
 }
@@ -249,7 +246,7 @@ body {
     position: absolute;
     bottom: -10px;
     left: -10px;
-    width: 175px;
+    width: 165px;
     pointer-events: none;
     z-index: 10;
 }
@@ -258,21 +255,43 @@ body {
     position: absolute;
     bottom: -8px;
     right: -8px;
-    width: 120px;
+    width: 115px;
     pointer-events: none;
     z-index: 10;
 }
 
 .sticker-avatar-ears {
     position: absolute;
-    top: -23px;
+    top: -21px;
     left: 50%;
     transform: translateX(-50%);
-    width: 58px;
+    width: 54px;
     pointer-events: none;
     z-index: 2;
 }
 
+.mini-deco {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-top: -3px;
+}
+
+/* ================= TƯƠNG THÍCH MÀN HÌNH NHỎ ================= */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .left-column {
+        border-radius: 18px 18px 0 0;
+        border-right: none;
+        border-bottom: 1.5px dashed #f5b8c8;
+        padding-bottom: 35px;
+    }
+}
 .mini-deco {
     display: inline-block;
     vertical-align: middle;
