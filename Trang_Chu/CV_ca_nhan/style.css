@@ -7,77 +7,82 @@
 }
 
 body {
-    background-color: #fff0f5;
-    color: #4a3b42;
+    background-color: #fff5f7; /* Nền hồng phấn nhẹ bên ngoài */
+    color: #4a3b3b;
     display: flex;
     justify-content: center;
-    padding: 30px 15px;
-    line-height: 1.55;
+    padding: 40px 15px;
+    line-height: 1.6;
 }
 
-/* Khung CV chính chia 2 cột 40% - 60% */
+/* Khung CV chính */
 .cv-container {
+    position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 920px;
     background-color: #ffffff;
     display: flex;
-    box-shadow: 0 10px 30px rgba(244, 143, 177, 0.25);
-    border-radius: 16px;
-    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(214, 138, 156, 0.2);
+    border: 2px solid #ffd6e0;
+    overflow: visible; /* Cho phép tai thỏ và cành hoa vươn nhẹ ra mép khung */
 }
 
 /* ================= CỘT TRÁI (40%) ================= */
 .left-column {
     width: 40%;
-    background-color: #ffd6e0;
-    color: #4a353d;
-    padding: 32px 24px;
+    background-color: #ffeaf0; /* Hồng baby pastel */
+    padding: 45px 30px 95px 30px; /* Chừa khoảng trống đáy cho đôi thỏ */
+    border-radius: 16px 0 0 16px;
+    border-right: 1.5px dashed #f5b8c8;
 }
 
-/* Khung ảnh đại diện nhỏ gọn 95x95px đặt góc trên bên trái */
 .avatar-box {
-    text-align: left;
-    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    width: 105px;
+    margin: 10px auto 25px auto;
+    text-align: center;
 }
 
 .avatar {
-    width: 95px;
-    height: 95px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: center top;
+    width: 105px;
+    height: 105px;
     border-radius: 50%;
-    border: 3px solid #ffffff;
-    box-shadow: 0 3px 10px rgba(216, 112, 147, 0.25);
-    display: block;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(214, 120, 145, 0.25);
+    position: relative;
+    z-index: 3;
 }
 
 .left-section {
-    margin-bottom: 22px;
+    margin-bottom: 26px;
 }
 
 .left-section h2 {
-    font-size: 15px;
-    letter-spacing: 1.2px;
-    color: #9e3b5a;
-    border-bottom: 2px solid #f7a8b8;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    color: #b84a68;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #f7c2d0;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .left-section p {
-    font-size: 13.5px;
+    font-size: 14px;
     text-align: justify;
+    color: #5c4949;
 }
 
 /* Danh sách liên hệ */
 .contact-list {
     list-style: none;
-    font-size: 13.5px;
 }
 
 .contact-list li {
-    margin-bottom: 9px;
+    font-size: 13.5px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -85,30 +90,35 @@ body {
 }
 
 .contact-list i {
-    color: #c94c72;
-    width: 16px;
+    color: #d66886;
+    width: 18px;
     text-align: center;
 }
 
 /* Thanh kỹ năng */
 .skill-item {
-    margin-bottom: 11px;
+    margin-bottom: 14px;
+}
+
+.skill-item span {
+    display: block;
     font-size: 13.5px;
     font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .progress-bar {
     width: 100%;
-    height: 6px;
-    background-color: #ffeef2;
+    height: 8px;
+    background-color: #ffffff;
     border-radius: 10px;
-    margin-top: 4px;
     overflow: hidden;
+    border: 1px solid #f7c2d0;
 }
 
 .progress {
     height: 100%;
-    background-color: #e06c8e;
+    background: linear-gradient(90deg, #f497b2, #d66886);
     border-radius: 10px;
 }
 
@@ -116,93 +126,156 @@ body {
 .hobbies {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 8px;
 }
 
 .hobbies span {
-    background-color: #fff5f7;
-    color: #9e3b5a;
-    padding: 5px 11px;
-    border-radius: 20px;
+    background-color: #ffffff;
+    color: #b84a68;
     font-size: 12.5px;
     font-weight: 500;
-    border: 1px solid #f7a8b8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #f5b8c8;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 /* ================= CỘT PHẢI (60%) ================= */
 .right-column {
     width: 60%;
-    padding: 35px 32px;
-    background-color: #ffffff;
+    padding: 45px 38px 90px 38px; /* Chừa khoảng trống đáy cho bé thỏ góc phải */
 }
 
 .header-box {
-    border-bottom: 2px solid #ffd6e0;
-    padding-bottom: 16px;
-    margin-bottom: 22px;
+    background-color: #fff6f8;
+    padding: 20px 24px;
+    border-radius: 14px;
+    border-left: 5px solid #e07a96;
+    margin-bottom: 28px;
 }
 
 .header-box h1 {
     font-size: 26px;
-    color: #c94c72;
+    color: #a83d5b;
     letter-spacing: 1px;
     margin-bottom: 4px;
 }
 
 .header-box .subtitle {
-    font-size: 12.5px;
+    font-size: 14px;
     font-weight: 600;
-    color: #8c6d79;
-    letter-spacing: 0.8px;
+    color: #8c6d75;
+    letter-spacing: 1.5px;
 }
 
 .right-section {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 }
 
 .right-section h2 {
-    font-size: 16px;
-    color: #c94c72;
-    border-bottom: 2px solid #ffe4ec;
-    padding-bottom: 5px;
-    margin-bottom: 14px;
+    font-size: 17px;
+    color: #b84a68;
+    border-bottom: 2px solid #ffe0e8;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .timeline-item {
-    margin-bottom: 15px;
-    padding-left: 13px;
-    border-left: 3px solid #f7a8b8;
+    position: relative;
+    padding-left: 18px;
+    border-left: 2px solid #f5b8c8;
+    margin-bottom: 18px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #e07a96;
+    border-radius: 50%;
 }
 
 .timeline-item .time {
     display: inline-block;
-    background-color: #ffe4ec;
-    color: #9e3b5a;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
-    padding: 2px 9px;
+    color: #b84a68;
+    background-color: #ffeaf0;
+    padding: 2px 10px;
     border-radius: 12px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .timeline-item h3 {
-    font-size: 15px;
-    color: #3d2b33;
+    font-size: 15.5px;
+    color: #3d2e2e;
+    margin-bottom: 3px;
 }
 
 .timeline-item .role {
-    font-size: 12.5px;
-    font-style: italic;
-    color: #b55d78;
-    margin-bottom: 4px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8c6d75;
+    margin-bottom: 5px;
 }
 
 .timeline-item p {
-    font-size: 13.5px;
-    color: #5c4b52;
+    font-size: 13.8px;
+    color: #5c4949;
+}
+
+/* ================= HỌA TIẾT HOA & THỎ ================= */
+.deco-bunny-ears {
+    position: absolute;
+    top: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 54px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.deco-top-right {
+    position: absolute;
+    top: -14px;
+    right: -12px;
+    width: 155px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.deco-bottom-left {
+    position: absolute;
+    bottom: -8px;
+    left: -12px;
+    width: 165px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.deco-bottom-right {
+    position: absolute;
+    bottom: -8px;
+    right: -10px;
+    width: 92px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.deco-inline-flower {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-top: -3px;
 }
 
 /* Tương thích màn hình điện thoại */
@@ -212,5 +285,11 @@ body {
     }
     .left-column, .right-column {
         width: 100%;
+    }
+    .left-column {
+        border-radius: 16px 16px 0 0;
+        border-right: none;
+        border-bottom: 1.5px dashed #f5b8c8;
+        padding-bottom: 35px;
     }
 }
