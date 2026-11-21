@@ -12,11 +12,12 @@
         <button id="music-btn" onclick="toggleMusic()">🔇 Bật nhạc thủy cung</button>
         <audio id="bg-music" src="thuycung.mp3" loop></audio>
 
-        <!-- Tiên cá, Rùa, Cá mập, Bạch tuộc -->
+        <!-- Tiên cá, Rùa, Cá mập, Bạch tuộc, Tàu ngầm -->
         <img src="tienca.png" id="tienca" class="creature" alt="Tiên cá">
         <img src="turtle.png" id="turtle" class="creature" alt="Rùa biển">
         <img src="shark.png" id="shark" class="creature" alt="Cá mập">
         <img src="bachtuot.png" id="bachtuot" class="creature" alt="Bạch tuộc">
+        <img src="taungam.png" id="taungam" class="creature" alt="Tàu ngầm">
 
         <!-- 3 Thợ lặn di chuyển lên xuống & đụng tường lật trái/phải -->
         <img src="diver1.png" id="diver1" class="creature diver" style="top: 25%; left: 15%;" alt="Thợ lặn 1">
@@ -56,7 +57,7 @@
             isPlaying = !isPlaying;
         }
 
-        // Quản lý chuyển động & quay đầu khi đụng tường
+        // Quản lý chuyển động
         const swimmers = [];
 
         function registerSwimmer(el, config) {
@@ -68,12 +69,18 @@
                 defaultFace: config.defaultFace, // Hướng mặt ảnh gốc ('left' hoặc 'right')
                 bobAmp: config.bobAmp || 0, // Biên độ nhấp nhô lên xuống (px)
                 bobSpeed: config.bobSpeed || 0, // Tốc độ nhấp nhô
-                phase: config.phase || Math.random() * Math.PI * 2
+                phase: config.phase || Math.random() * Math.PI * 2,
+                passThrough: config.passThrough || false // true = đi xuyên mép màn hình, false = đụng tường quay đầu
             });
         }
 
         window.addEventListener('load', () => {
             const H = window.innerHeight;
+
+            // Tàu ngầm: lặn gần đáy, đi ngang xuyên qua màn hình (không quay đầu)
+            registerSwimmer(document.getElementById('taungam'), {
+                startY: H * 0.80, vx: 0.45, defaultFace: 'right', bobAmp: 6, bobSpeed: 0.008, passThrough: true
+            });
 
             // Tiên cá: bơi chậm rãi, nhấp nhô nhẹ nhàng (đầu gốc bên trái)
             registerSwimmer(document.getElementById('tienca'), {
@@ -139,15 +146,24 @@
                 const elWidth = s.el.offsetWidth || 100;
                 const elHeight = s.el.offsetHeight || 100;
 
-                // Đụng tường phải -> quay đầu sang trái
-                if (s.x + elWidth >= screenW) {
-                    s.x = screenW - elWidth;
-                    s.vx = -Math.abs(s.vx);
-                }
-                // Đụng tường trái -> quay đầu sang phải
-                if (s.x <= 0) {
-                    s.x = 0;
-                    s.vx = Math.abs(s.vx);
+                if (s.passThrough) {
+                    // Đi xuyên qua màn hình (ra hết mép phải thì xuất hiện lại từ mép trái và ngược lại)
+                    if (s.vx > 0 && s.x > screenW) {
+                        s.x = -elWidth;
+                    } else if (s.vx < 0 && s.x + elWidth < 0) {
+                        s.x = screenW;
+                    }
+                } else {
+                    // Đụng tường phải -> quay đầu sang trái
+                    if (s.x + elWidth >= screenW) {
+                        s.x = screenW - elWidth;
+                        s.vx = -Math.abs(s.vx);
+                    }
+                    // Đụng tường trái -> quay đầu sang phải
+                    if (s.x <= 0) {
+                        s.x = 0;
+                        s.vx = Math.abs(s.vx);
+                    }
                 }
 
                 // Tọa độ Y nhấp nhô và giữ không tràn khỏi mép trên/dưới
