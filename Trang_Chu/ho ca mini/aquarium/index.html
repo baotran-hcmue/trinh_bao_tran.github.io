@@ -24,19 +24,19 @@
         <img src="diver3.png" id="diver3" class="creature diver" style="top: 30%; left: 78%;" alt="Thợ lặn 3">
 
         <!-- Đàn cá xám (Gốc: đầu trái, đuôi phải) -->
-        <img src="caxam.png" class="creature school-xam" style="top: 18%; left: 10%;" alt="Cá xám">
-        <img src="caxam.png" class="creature school-xam" style="top: 25%; left: 18%;" alt="Cá xám">
-        <img src="caxam.png" class="creature school-xam" style="top: 22%; left: 4%;" alt="Cá xám">
+        <img src="caxam.png" class="creature school-xam" style="top: 14%; left: 8%;" alt="Cá xám">
+        <img src="caxam.png" class="creature school-xam" style="top: 24%; left: 20%;" alt="Cá xám">
+        <img src="caxam.png" class="creature school-xam" style="top: 20%; left: 2%;" alt="Cá xám">
 
         <!-- Đàn cá xanh (Gốc: đầu phải, đuôi trái) -->
-        <img src="caxanh.png" class="creature school-xanh" style="top: 50%; left: 65%;" alt="Cá xanh">
-        <img src="caxanh.png" class="creature school-xanh" style="top: 57%; left: 74%;" alt="Cá xanh">
-        <img src="caxanh.png" class="creature school-xanh" style="top: 54%; left: 56%;" alt="Cá xanh">
+        <img src="caxanh.png" class="creature school-xanh" style="top: 46%; left: 60%;" alt="Cá xanh">
+        <img src="caxanh.png" class="creature school-xanh" style="top: 56%; left: 72%;" alt="Cá xanh">
+        <img src="caxanh.png" class="creature school-xanh" style="top: 52%; left: 48%;" alt="Cá xanh">
 
         <!-- Đàn cá vàng (Gốc: đầu phải, đuôi trái) -->
-        <img src="cavang.png" class="creature school-vang" style="top: 70%; left: 25%;" alt="Cá vàng">
-        <img src="cavang.png" class="creature school-vang" style="top: 77%; left: 33%;" alt="Cá vàng">
-        <img src="cavang.png" class="creature school-vang" style="top: 74%; left: 17%;" alt="Cá vàng">
+        <img src="cavang.png" class="creature school-vang" style="top: 68%; left: 22%;" alt="Cá vàng">
+        <img src="cavang.png" class="creature school-vang" style="top: 76%; left: 34%;" alt="Cá vàng">
+        <img src="cavang.png" class="creature school-vang" style="top: 72%; left: 12%;" alt="Cá vàng">
     </div>
 
     <script>
@@ -75,53 +75,53 @@
         window.addEventListener('load', () => {
             const H = window.innerHeight;
 
-            // Tiên cá: bơi chậm, nhấp nhô lên xuống ngao du ngắm cảnh (đầu gốc bên trái)
+            // Tiên cá: bơi chậm rãi, nhấp nhô nhẹ nhàng (đầu gốc bên trái)
             registerSwimmer(document.getElementById('tienca'), {
-                startY: H * 0.35, vx: -0.75, defaultFace: 'left', bobAmp: 35, bobSpeed: 0.022
+                startY: H * 0.35, vx: -0.25, defaultFace: 'left', bobAmp: 30, bobSpeed: 0.009
             });
 
-            // Rùa biển & Cá mập: cùng tốc độ chậm rãi 0.7
+            // Rùa biển & Cá mập: cùng tốc độ cực kỳ thư thả
             registerSwimmer(document.getElementById('turtle'), {
-                startY: H * 0.64, vx: 0.7, defaultFace: 'right', bobAmp: 12, bobSpeed: 0.015
+                startY: H * 0.64, vx: 0.22, defaultFace: 'right', bobAmp: 10, bobSpeed: 0.007
             });
             registerSwimmer(document.getElementById('shark'), {
-                startY: H * 0.12, vx: 0.7, defaultFace: 'right', bobAmp: 8, bobSpeed: 0.015
+                startY: H * 0.12, vx: 0.22, defaultFace: 'right', bobAmp: 8, bobSpeed: 0.007
             });
 
-            // Bạch tuộc: bơi chậm tầng đáy
+            // Bạch tuộc: trôi chậm tầng đáy
             registerSwimmer(document.getElementById('bachtuot'), {
-                startY: H * 0.78, vx: -0.55, defaultFace: 'left', bobAmp: 18, bobSpeed: 0.025
+                startY: H * 0.78, vx: -0.20, defaultFace: 'right', bobAmp: 15, bobSpeed: 0.01
             });
 
-            // 3 Thợ lặn: lặn lên xuống biên độ lớn + trôi ngang đụng tường lật trái/phải
+            // 3 Thợ lặn: lặn lên xuống êm ái + trôi ngang chậm đụng tường lật trái/phải
             registerSwimmer(document.getElementById('diver1'), {
-                startY: H * 0.38, vx: 0.5, defaultFace: 'right', bobAmp: 130, bobSpeed: 0.018, phase: 0
+                startY: H * 0.38, vx: 0.18, defaultFace: 'right', bobAmp: 130, bobSpeed: 0.007, phase: 0
             });
             registerSwimmer(document.getElementById('diver2'), {
-                startY: H * 0.45, vx: -0.45, defaultFace: 'right', bobAmp: 150, bobSpeed: 0.015, phase: 2.1
+                startY: H * 0.45, vx: -0.16, defaultFace: 'right', bobAmp: 150, bobSpeed: 0.006, phase: 2.1
             });
             registerSwimmer(document.getElementById('diver3'), {
-                startY: H * 0.40, vx: 0.55, defaultFace: 'right', bobAmp: 140, bobSpeed: 0.02, phase: 4.2
+                startY: H * 0.40, vx: 0.20, defaultFace: 'right', bobAmp: 140, bobSpeed: 0.0075, phase: 4.2
             });
 
-            // Đàn cá xám (đầu gốc bên trái) - bơi chậm hơn (1.05)
+            // Đàn cá xám (đầu gốc bên trái) - bơi chậm rãi
             document.querySelectorAll('.school-xam').forEach((el, idx) => {
                 registerSwimmer(el, {
-                    startY: el.offsetTop, vx: -1.05, defaultFace: 'left', bobAmp: 8, bobSpeed: 0.025, phase: idx * 0.8
+                    startY: el.offsetTop, vx: -0.34, defaultFace: 'left', bobAmp: 8, bobSpeed: 0.01, phase: idx * 0.8
                 });
             });
 
-            // Đàn cá xanh (đầu gốc bên phải) - bơi chậm hơn (1.1)
+            // Đàn cá xanh (đầu gốc bên phải) - bơi chậm rãi
             document.querySelectorAll('.school-xanh').forEach((el, idx) => {
                 registerSwimmer(el, {
-                    startY: el.offsetTop, vx: 1.1, defaultFace: 'right', bobAmp: 10, bobSpeed: 0.028, phase: idx * 0.7
+                    startY: el.offsetTop, vx: 0.36, defaultFace: 'right', bobAmp: 10, bobSpeed: 0.011, phase: idx * 0.7
                 });
             });
 
-            // Đàn cá vàng (đầu gốc bên phải) - bơi chậm hơn (1.0)
+            // Đàn cá vàng (đầu gốc bên phải) - bơi chậm rãi
             document.querySelectorAll('.school-vang').forEach((el, idx) => {
                 registerSwimmer(el, {
-                    startY: el.offsetTop, vx: 1.0, defaultFace: 'right', bobAmp: 7, bobSpeed: 0.025, phase: idx * 0.9
+                    startY: el.offsetTop, vx: 0.32, defaultFace: 'right', bobAmp: 7, bobSpeed: 0.01, phase: idx * 0.9
                 });
             });
 
