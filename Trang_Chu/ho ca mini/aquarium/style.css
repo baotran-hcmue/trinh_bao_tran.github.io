@@ -7,151 +7,121 @@
 body, html {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Ẩn thanh cuộn khi cá bơi ra ngoài màn hình */
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Nền nước biển chuyển sắc */
-#content {
+#aquarium {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 35%, #0072ff 80%, #003973 100%);
+    background-image: url('nen.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Định vị chung cho các sinh vật */
-#shark, #turtle, #goldFishSchool, #faintSchool, #diver1, #diver2, #diver3 {
+/* Nút bật/tắt âm thanh */
+#music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(0, 85, 130, 0.75);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 25px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#music-btn:hover {
+    background: rgba(0, 130, 190, 0.9);
+    transform: scale(1.05);
+}
+
+/* Định dạng chung cho sinh vật bơi */
+.creature {
     position: absolute;
+    pointer-events: none;
+    user-select: none;
+    will-change: left, top, transform;
 }
 
-/* 1. Cá mập: Bơi nhanh từ trái qua phải, hơi lượn sóng */
+/* Kích thước từng sinh vật */
+#tienca {
+    width: 170px;
+    z-index: 15;
+}
+
 #shark {
-    top: 18%;
-    left: -250px;
-    animation: swimRight 14s linear infinite;
+    width: 240px;
+    z-index: 12;
 }
 
-/* 2. Rùa biển: Bơi từ tốn từ phải qua trái */
 #turtle {
-    bottom: 22%;
-    right: -200px;
-    animation: swimLeft 24s linear infinite;
+    width: 145px;
+    z-index: 14;
 }
 
-/* 3. Đàn cá vàng: Bơi từ trái qua phải ở tầng giữa */
-#goldFishSchool {
-    top: 48%;
-    left: -220px;
-    animation: swimRight 18s linear infinite;
-    animation-delay: 2s;
+#bachtuot {
+    width: 120px;
+    z-index: 13;
 }
 
-/* 4. Đàn cá nhỏ: Bơi chậm phía xa, tạo chiều sâu */
-#faintSchool {
-    top: 32%;
-    right: -180px;
-    opacity: 0.75;
-    animation: swimLeft 28s linear infinite;
+.school-xam {
+    width: 75px;
+    z-index: 8;
 }
 
-/* 5. Thợ lặn 1: Lơ lửng quan sát, nhấp nhô lên xuống tại chỗ */
+.school-xanh {
+    width: 70px;
+    z-index: 9;
+}
+
+.school-vang {
+    width: 65px;
+    z-index: 10;
+}
+
+/* 3 Thợ lặn di chuyển lên xuống */
+.diver {
+    position: absolute;
+    width: 110px;
+    z-index: 11;
+    pointer-events: none;
+}
+
 #diver1 {
-    top: 25%;
-    left: 15%;
-    animation: floatVertical 4s ease-in-out infinite alternate;
+    left: 18%;
+    animation: diverFloat 7s ease-in-out infinite alternate;
 }
 
-/* 6. Thợ lặn 2: Lặn chéo từ góc dưới phải lên góc trên trái */
 #diver2 {
-    bottom: -150px;
-    right: 10%;
-    animation: diveDiagonal 16s ease-in-out infinite;
+    left: 48%;
+    animation: diverFloat 9s ease-in-out infinite alternate-reverse;
 }
 
-/* 7. Thợ lặn 3: Bơi ngang khám phá gần đáy biển */
 #diver3 {
-    bottom: 8%;
-    left: -180px;
-    animation: diverSwim 20s linear infinite;
+    left: 78%;
+    animation: diverFloat 8s ease-in-out infinite alternate;
 }
 
-/* --- CÁC HIỆU ỨNG CHUYỂN ĐỘNG (KEYFRAMES) --- */
-
-/* Bơi ngang từ trái sang phải */
-@keyframes swimRight {
+@keyframes diverFloat {
     0% {
-        left: -250px;
-        transform: translateY(0px);
+        top: 5%;
+        transform: translateY(0) rotate(-3deg);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(10px) rotate(3deg);
     }
     100% {
-        left: 105vw;
-        transform: translateY(0px);
-    }
-}
-
-/* Bơi ngang từ phải sang trái */
-@keyframes swimLeft {
-    0% {
-        right: -220px;
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        right: 105vw;
-        transform: translateY(0px);
-    }
-}
-
-/* Thợ lặn nhấp nhô tại chỗ */
-@keyframes floatVertical {
-    0% {
-        transform: translateY(0px) rotate(-3deg);
-    }
-    100% {
-        transform: translateY(35px) rotate(3deg);
-    }
-}
-
-/* Thợ lặn bơi chéo lên mặt nước */
-@keyframes diveDiagonal {
-    0% {
-        bottom: -150px;
-        right: 15%;
-        transform: rotate(-10deg);
-    }
-    50% {
-        bottom: 45%;
-        right: 45%;
-        transform: rotate(5deg);
-    }
-    100% {
-        bottom: 105vh;
-        right: 75%;
-        transform: rotate(-10deg);
-    }
-}
-
-/* Thợ lặn bơi ngang kết hợp nhấp nhô nhẹ */
-@keyframes diverSwim {
-    0% {
-        left: -180px;
-        bottom: 8%;
-    }
-    25% {
-        bottom: 14%;
-    }
-    50% {
-        bottom: 8%;
-    }
-    75% {
-        bottom: 15%;
-    }
-    100% {
-        left: 105vw;
-        bottom: 8%;
+        top: calc(100vh - 180px);
+        transform: translateY(0) rotate(-2deg);
     }
 }
