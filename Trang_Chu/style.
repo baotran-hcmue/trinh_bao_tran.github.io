@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f0; /* Nền hồng pastel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 45px 55px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #d63384;
+    font-size: 32px;
+    margin: 0 0 12px 0;
+}
+
+p {
+    color: #555555;
+    font-size: 18px;
+    margin: 0 0 30px 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #ff85a2;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #e05780;
+    transform: translateY(-3px);
+}
