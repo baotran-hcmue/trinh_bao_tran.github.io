@@ -53,50 +53,45 @@ body, html {
     will-change: left, top, transform;
 }
 
-/* Kích thước từng đối tượng */
-#tienca {
-    width: 185px;
-    z-index: 15;
-}
-
+/* Cá mập, Rùa và Tiên cá thu nhỏ thật nhỏ lại */
 #shark {
-    width: 250px;
+    width: 65px;
     z-index: 12;
 }
 
 #turtle {
-    width: 155px;
+    width: 45px;
     z-index: 14;
 }
 
+#tienca {
+    width: 60px;
+    z-index: 15;
+}
+
 #bachtuot {
-    width: 130px;
+    width: 110px;
     z-index: 13;
 }
 
-/* Tăng kích thước các đàn cá cho to rõ hơn */
+/* Các đàn cá khác cá mập bự lên */
 .school-xam {
-    width: 115px;
+    width: 300px;
     z-index: 8;
 }
 
 .school-xanh {
-    width: 110px;
+    width: 290px;
     z-index: 9;
 }
 
 .school-vang {
-    width: 105px;
+    width: 280px;
     z-index: 10;
 }
 
 /* 3 Thợ lặn */
 .diver {
-    width: 115px;
-    z-index: 11;
-}
-/* 3 Thợ lặn */
-.diver {
-    width: 115px;
+    width: 105px;
     z-index: 11;
 }
