@@ -3,64 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - Trịnh Bảo Trân</title>
+    <title>CV Cá Nhân - Trịnh Bảo Trân</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffe6f0; /* Nền hồng pastel */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        /* Tinh chỉnh thêm vị trí cho dây hoa leo dọc bên trái và các bé thỏ */
+        .deco-vine-left {
+            position: absolute;
+            top: 90px;
+            left: -24px;
+            width: 55px;
+            height: 480px;
+            pointer-events: none;
+            z-index: 10;
         }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 45px 55px;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        .deco-top-right {
+            width: 210px !important;
+            top: -18px !important;
+            right: -16px !important;
         }
-        h1 {
-            color: #d63384;
-            font-size: 32px;
-            margin: 0 0 12px 0;
+        .deco-bottom-left {
+            width: 210px !important;
+            bottom: -12px !important;
+            left: -18px !important;
         }
-        p {
-            color: #555555;
-            font-size: 18px;
-            margin: 0 0 30px 0;
-        }
-        .button-group {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-        .btn {
-            text-decoration: none;
-            background-color: #ff85a2;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .btn:hover {
-            background-color: #e05780;
-            transform: translateY(-3px);
+        .deco-bottom-right {
+            width: 115px !important;
+            bottom: -10px !important;
+            right: -12px !important;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Trịnh Bảo Trân</h1>
-        <h1>52.01.CNTT.A</h1>
-        <p>Bạn muốn xem trang web nào?</p>
-        <div class="button-group">
-            <a href="CV_ca_nhan/index.html" class="btn">CV Cá Nhân</a>
-            <a href="ho ca mini/aquarium/index.html" class="btn">Hồ Cá Mini</a>
-        </div>
+
+    <div class="cv-container">
+
+        <!-- 1. GÓC TRÊN BÊN PHẢI: Cành hoa đào & bé thỏ nâu nằm vắt vẻo -->
+        <svg class="deco-top-right" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cành cây nâu uốn lượn -->
+            <path d="M260 22 C210 42, 160 32, 110 26 C70 21, 35 32, 12 42" stroke="#6E4E3A" stroke-width="3.2" stroke-linecap="round"/>
+            <path d="M175 33 C150 52, 125 65, 95 75" stroke="#6E4E3A" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M85 25 C65 14, 48 12, 32 16" stroke="#6E4E3A" stroke-width="2" stroke-linecap="round"/>
+            
+            <!-- Lá xanh -->
+            <path d="M115 26 C110 15, 122 12, 125 23 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.3"/>
+            <path d="M52 28 C44 19, 36 25, 46 33 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.3"/>
+            <path d="M140 53 C148 62, 156 55, 146 47 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.3"/>
+            <path d="M108 70 C102 80, 113 83, 116 72 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.3"/>
+
+            <!-- Bông hoa đào 5 cánh 1 -->
+            <g transform="translate(88, 25)">
+                <circle cx="0" cy="-9" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="8.5" cy="-3" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="5.5" cy="7.5" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="-5.5" cy="7.5" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="-8.5" cy="-3" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="0" cy="0" r="4.2" fill="#FCE38A" stroke="#4A3528" stroke-width="1.1"/>
+            </g>
+            <!-- Bông hoa đào 5 cánh 2 -->
+            <g transform="translate(152, 46) scale(0.95)">
+                <circle cx="0" cy="-9" r="6.5" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="8.5" cy="-3" r="6.5" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="5.5" cy="7.5" r="6.5" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="-5.5" cy="7.5" r="6.5" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="-8.5" cy="-3" r="6.5" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="0" cy="0" r="4.2" fill="#FCE38A" stroke="#4A3528" stroke-width="1.1"/>
+            </g>
+            <!-- Bông hoa đào 5 cánh 3 -->
+            <g transform="translate(22, 38) scale(0.8)">
+                <circle cx="0" cy="-9" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="8.5" cy="-3" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="5.5" cy="7.5" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="-5.5" cy="7.5" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="-8.5" cy="-3" r="6.5" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.3"/>
+                <circle cx="0" cy="0" r="4.2" fill="#FCE38A" stroke="#4A3528" stroke-width="1.1"/>
+            </g>
+
+            <!-- Bé thỏ nâu nằm úp trên cành -->
+            <g transform="translate(182, 2)">
+                <!-- Tai sau -->
+                <ellipse cx="22" cy="12" rx="4" ry="12" transform="rotate(15 22 12)" fill="#A67658" stroke="#4A3528" stroke-width="1.5"/>
+                <!-- Thân thỏ -->
+                <path d="M18 34 C18 20, 48 18, 52 31 C54 38, 42 40, 26 39 Z" fill="#B58363" stroke="#4A3528" stroke-width="1.5"/>
+                <!-- Chân trước thò xuống -->
+                <ellipse cx="14" cy="36" rx="5" ry="3.2" transform="rotate(-20 14 36)" fill="#B58363" stroke="#4A3528" stroke-width="1.5"/>
+                <!-- Đầu thỏ -->
+                <circle cx="15" cy="24" r="11" fill="#B58363" stroke="#4A3528" stroke-width="1.5"/>
+                <!-- Tai trước -->
+                <ellipse cx="17" cy="11" rx="4.2" ry="12.5" transform="rotate(-12 17 11)" fill="#B58363" stroke="#4A3528" stroke-width="1.5"/>
+                <ellipse cx="17" cy="12" rx="2" ry="8.5" transform="rotate(-12 17 12)" fill="#E8A598"/>
+                <!-- Mắt, mũi, má hồng -->
+                <circle cx="9.5" cy="23" r="1.5" fill="#3B281E"/>
+                <path d="M5 26 Q6.5 27.5 8 26" stroke="#3B281E" stroke-width="1.2" stroke-linecap="round"/>
+                <ellipse cx="8" cy="27.5" rx="2.5" ry="1.6" fill="#F497A9" opacity="0.85"/>
+                <!-- Đuôi bông -->
+                <circle cx="53" cy="30" r="4.5" fill="#FFF7EE" stroke="#4A3528" stroke-width="1.4"/>
+            </g>
+        </svg>
+
+        <!-- 2. DÂY HOA LEO DỌC VIỀN TRÁI + BÉ THỎ TRẮNG LẤP LÓ -->
+        <svg class="deco-vine-left" viewBox="0 0 70 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Thân dây leo uốn lượn dọc -->
+            <path d="M35 10 C45 90, 22 170, 36 260 C48 350, 24 430, 35 510" stroke="#6E4E3A" stroke-width="2.8" stroke-linecap="round"/>
+            <!-- Lá xanh dọc thân -->
+            <path d="M36 55 C48 48, 52 60, 38 63 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.2"/>
+            <path d="M31 125 C18 118, 16 130, 30 133 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.2"/>
+            <path d="M35 215 C48 208, 50 220, 36 223 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.2"/>
+            <path d="M38 340 C50 332, 54 345, 39 348 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.2"/>
+            <path d="M30 425 C16 418, 14 430, 29 433 Z" fill="#9BC995" stroke="#4A3528" stroke-width="1.2"/>
+
+            <!-- Hoa đào 1 -->
+            <g transform="translate(33, 35) scale(0.85)">
+                <circle cx="0" cy="-8" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="8" cy="-2.5" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="5" cy="7" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="-5" cy="7" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="-8" cy="-2.5" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="0" cy="0" r="3.8" fill="#FCE38A" stroke="#4A3528" stroke-width="1"/>
+            </g>
+            <!-- Hoa đào 2 -->
+            <g transform="translate(35, 165) scale(0.9)">
+                <circle cx="0" cy="-8" r="6" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.2"/><circle cx="8" cy="-2.5" r="6" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="5" cy="7" r="6" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.2"/><circle cx="-5" cy="7" r="6" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="-8" cy="-2.5" r="6" fill="#FCE1E8" stroke="#4A3528" stroke-width="1.2"/><circle cx="0" cy="0" r="3.8" fill="#FCE38A" stroke="#4A3528" stroke-width="1"/>
+            </g>
+
+            <!-- Bé thỏ trắng ôm thân dây leo ở giữa -->
+            <g transform="translate(8, 255)">
+                <ellipse cx="16" cy="12" rx="4" ry="13" transform="rotate(-18 16 12)" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.5"/>
+                <ellipse cx="16" cy="13" rx="1.8" ry="8.5" transform="rotate(-18 16 13)" fill="#FAD2DC"/>
+                <ellipse cx="25" cy="11" rx="4" ry="13" transform="rotate(8 25 11)" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.5"/>
+                <ellipse cx="25" cy="12" rx="1.8" ry="8.5" transform="rotate(8 25 12)" fill="#FAD2DC"/>
+                <ellipse cx="22" cy="42" rx="13" ry="15" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.5"/>
+                <circle cx="23" cy="26" r="11" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.5"/>
+                <circle cx="28" cy="24" r="1.5" fill="#3B281E"/>
+                <ellipse cx="30" cy="28" rx="2.3" ry="1.5" fill="#F497A9"/>
+                <circle cx="9" cy="46" r="4" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.4"/>
+            </g>
+
+            <!-- Hoa đào 3 -->
+            <g transform="translate(34, 385) scale(0.85)">
+                <circle cx="0" cy="-8" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="8" cy="-2.5" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="5" cy="7" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="-5" cy="7" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="-8" cy="-2.5" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="0" cy="0" r="3.8" fill="#FCE38A" stroke="#4A3528" stroke-width="1"/>
+            </g>
+        </svg>
+
+        <!-- 3. GÓC DƯỚI BÊN TRÁI: Cặp đôi thỏ trắng & thỏ nâu ngồi giữa bụi hoa -->
+        <svg class="deco-bottom-left" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bụi lá cỏ & cành hoa nền -->
+            <path d="M18 140 C15 95, 22 50, 14 15" stroke="#6B8E6E" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M35 140 C42 105, 55 85, 68 68" stroke="#6B8E6E" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M15 140 C80 132, 165 135, 240 142" stroke="#6B8E6E" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="26" cy="75" rx="9" ry="4.5" transform="rotate(-35 26 75)" fill="#9BC995" stroke="#4A3528" stroke-width="1.3"/>
+            <ellipse cx="52" cy="92" rx="9" ry="4.5" transform="rotate(25 52 92)" fill="#9BC995" stroke="#4A3528" stroke-width="1.3"/>
+
+            <!-- Hoa hồng & hoa vàng bụi cỏ -->
+            <g transform="translate(22, 42) scale(0.9)">
+                <circle cx="0" cy="-8" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="8" cy="-2.5" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="5" cy="7" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="-5" cy="7" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="-8" cy="-2.5" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="0" cy="0" r="3.8" fill="#FCE38A" stroke="#4A3528" stroke-width="1"/>
+            </g>
+            <g transform="translate(65, 68) scale(0.85)">
+                <circle cx="0" cy="-8" r="6" fill="#FFF3B0" stroke="#4A3528" stroke-width="1.2"/><circle cx="8" cy="-2.5" r="6" fill="#FFF3B0" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="5" cy="7" r="6" fill="#FFF3B0" stroke="#4A3528" stroke-width="1.2"/><circle cx="-5" cy="7" r="6" fill="#FFF3B0" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="-8" cy="-2.5" r="6" fill="#FFF3B0" stroke="#4A3528" stroke-width="1.2"/><circle cx="0" cy="0" r="3.8" fill="#F4A261" stroke="#4A3528" stroke-width="1"/>
+            </g>
+
+            <!-- Bé thỏ trắng bên trái (quay mặt sang phải) -->
+            <g transform="translate(48, 72)">
+                <!-- Tai -->
+                <ellipse cx="34" cy="14" rx="4.5" ry="14" transform="rotate(-12 34 14)" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+                <ellipse cx="34" cy="15" rx="2" ry="9" transform="rotate(-12 34 15)" fill="#FAD2DC"/>
+                <ellipse cx="44" cy="15" rx="4.5" ry="14" transform="rotate(14 44 15)" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+                <ellipse cx="44" cy="16" rx="2" ry="9" transform="rotate(14 44 16)" fill="#FAD2DC"/>
+                <!-- Thân mập tròn -->
+                <ellipse cx="26" cy="48" rx="19" ry="16" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+                <!-- Đầu -->
+                <circle cx="40" cy="34" r="14" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+                <!-- Mắt, mũi, má hồng -->
+                <circle cx="46" cy="32" r="1.8" fill="#3B281E"/>
+                <path d="M50 35 Q51.5 36.5 53 35" stroke="#3B281E" stroke-width="1.3" stroke-linecap="round"/>
+                <ellipse cx="48" cy="37" rx="3" ry="2" fill="#F497A9"/>
+                <!-- Chân & đuôi -->
+                <ellipse cx="36" cy="63" rx="7" ry="3.5" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.5"/>
+                <circle cx="7" cy="48" r="5" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.5"/>
+            </g>
+
+            <!-- Bé thỏ nâu bên phải (quay mặt sang trái nhìn thỏ trắng) -->
+            <g transform="translate(115, 76)">
+                <!-- Tai -->
+                <ellipse cx="16" cy="13" rx="4.2" ry="13.5" transform="rotate(-14 16 13)" fill="#B58363" stroke="#4A3528" stroke-width="1.6"/>
+                <ellipse cx="16" cy="14" rx="1.9" ry="8.5" transform="rotate(-14 16 14)" fill="#E8A598"/>
+                <ellipse cx="25" cy="13" rx="4.2" ry="13.5" transform="rotate(12 25 13)" fill="#B58363" stroke="#4A3528" stroke-width="1.6"/>
+                <ellipse cx="25" cy="14" rx="1.9" ry="8.5" transform="rotate(12 25 14)" fill="#E8A598"/>
+                <!-- Thân -->
+                <ellipse cx="31" cy="45" rx="18" ry="15" fill="#B58363" stroke="#4A3528" stroke-width="1.6"/>
+                <!-- Đầu -->
+                <circle cx="19" cy="32" r="13.5" fill="#B58363" stroke="#4A3528" stroke-width="1.6"/>
+                <!-- Mắt, mũi, má hồng -->
+                <circle cx="13" cy="30" r="1.7" fill="#3B281E"/>
+                <path d="M7 33 Q8.5 34.5 10 33" stroke="#3B281E" stroke-width="1.3" stroke-linecap="round"/>
+                <ellipse cx="11" cy="35" rx="2.8" ry="1.9" fill="#F497A9"/>
+                <!-- Chân & đuôi -->
+                <ellipse cx="21" cy="59" rx="7" ry="3.5" fill="#B58363" stroke="#4A3528" stroke-width="1.5"/>
+                <circle cx="49" cy="45" r="4.8" fill="#FFF7EE" stroke="#4A3528" stroke-width="1.5"/>
+            </g>
+        </svg>
+
+        <!-- 4. GÓC DƯỚI BÊN PHẢI: Bé thỏ trắng ngồi ngoan ngoãn -->
+        <svg class="deco-bottom-right" viewBox="0 0 130 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tai thỏ -->
+            <ellipse cx="52" cy="28" rx="5.5" ry="18" transform="rotate(-10 52 28)" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+            <ellipse cx="52" cy="29" rx="2.5" ry="12" transform="rotate(-10 52 29)" fill="#FAD2DC"/>
+            <ellipse cx="66" cy="27" rx="5.5" ry="18" transform="rotate(8 66 27)" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+            <ellipse cx="66" cy="28" rx="2.5" ry="12" transform="rotate(8 66 28)" fill="#FAD2DC"/>
+            <!-- Thân thỏ ngồi -->
+            <ellipse cx="66" cy="92" rx="23" ry="28" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+            <!-- Đầu thỏ -->
+            <circle cx="59" cy="58" r="18" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+            <!-- Mắt, miệng, má hồng -->
+            <circle cx="51" cy="56" r="2" fill="#3B281E"/>
+            <path d="M44 60 Q46 62 48 60" stroke="#3B281E" stroke-width="1.4" stroke-linecap="round"/>
+            <ellipse cx="48" cy="62" rx="3.4" ry="2.2" fill="#F497A9"/>
+            <!-- Tay trước & chân & đuôi -->
+            <path d="M52 78 C45 84, 46 94, 54 94" stroke="#4A3528" stroke-width="1.5" stroke-linecap="round"/>
+            <ellipse cx="54" cy="118" rx="10" ry="4.5" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+            <circle cx="90" cy="105" r="6" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+            <!-- Bông hoa đào dưới chân -->
+            <g transform="translate(30, 114) scale(0.9)">
+                <circle cx="0" cy="-8" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="8" cy="-2.5" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="5" cy="7" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="-5" cy="7" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/>
+                <circle cx="-8" cy="-2.5" r="6" fill="#FAD2DC" stroke="#4A3528" stroke-width="1.2"/><circle cx="0" cy="0" r="3.8" fill="#FCE38A" stroke="#4A3528" stroke-width="1"/>
+            </g>
+        </svg>
+
+        <!-- CỘT TRÁI (Tỉ lệ 40%) -->
+        <aside class="left-column">
+            <div class="avatar-box">
+                <svg class="deco-bunny-ears" viewBox="0 0 60 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="20" cy="18" rx="5" ry="14" transform="rotate(-15 20 18)" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+                    <ellipse cx="20" cy="19" rx="2.2" ry="9" transform="rotate(-15 20 19)" fill="#FAD2DC"/>
+                    <ellipse cx="40" cy="18" rx="5" ry="14" transform="rotate(15 40 18)" fill="#FFFFFF" stroke="#4A3528" stroke-width="1.6"/>
+                    <ellipse cx="40" cy="19" rx="2.2" ry="9" transform="rotate(15 40 19)" fill="#FAD2DC"/>
+                </svg>
+                <img src="btr.png" alt="Trịnh Bảo Trân" class="avatar">
+            </div>
+
+            <!-- Giới thiệu bản thân -->
+            <section class="left-section">
+                <h2>
+                    GIỚI THIỆU
+                    <svg class="deco-inline-flower" width="18" height="18" viewBox="0 0 24 24">
+                        <circle cx="12" cy="5" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="18" cy="10" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="16" cy="17" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="8" cy="17" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="6" cy="10" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="12" cy="12" r="3" fill="#FCE38A"/>
+                    </svg>
+                </h2>
+                <p>
+                    Xin chào! Mình là Trịnh Bảo Trân, hiện đang là sinh viên ngành Công nghệ Thông tin lớp CNTT A tại Trường Đại học Sư phạm TP. Hồ Chí Minh. Mình yêu thích công nghệ, chụp ảnh và sáng tạo trong lĩnh vực Graphic &amp; Digital Design.
+                </p>
+            </section>
+
+            <!-- Thông tin liên hệ -->
+            <section class="left-section">
+                <h2>LIÊN HỆ</h2>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-phone"></i> 0777 101 336</li>
+                    <li><i class="fa-solid fa-envelope"></i> trinhbaotran2907@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh, Việt Nam</li>
+                </ul>
+            </section>
+
+            <!-- Kỹ năng -->
+            <section class="left-section">
+                <h2>KỸ NĂNG</h2>
+                <div class="skill-item">
+                    <span>Microsoft Office (Word, Excel, PowerPoint)</span>
+                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>CapCut &amp; Alight Motion</span>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Graphic &amp; Digital Design</span>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>HTML &amp; CSS cơ bản</span>
+                    <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                </div>
+            </section>
+
+            <!-- Sở thích -->
+            <section class="left-section">
+                <h2>SỞ THÍCH</h2>
+                <div class="hobbies">
+                    <span><i class="fa-solid fa-laptop-code"></i> Công nghệ</span>
+                    <span><i class="fa-solid fa-camera-retro"></i> Chụp ảnh</span>
+                    <span><i class="fa-solid fa-palette"></i> Graphic Design</span>
+                </div>
+            </section>
+        </aside>
+
+        <!-- CỘT PHẢI (Tỉ lệ 60%) -->
+        <main class="right-column">
+            <!-- Họ tên & Vị trí -->
+            <header class="header-box">
+                <h1>
+                    TRỊNH BẢO TRÂN
+                    <svg class="deco-inline-flower" width="22" height="22" viewBox="0 0 24 24">
+                        <circle cx="12" cy="5" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="18" cy="10" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="16" cy="17" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="8" cy="17" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="6" cy="10" r="4" fill="#FAD2DC" stroke="#4A3528" stroke-width="1"/>
+                        <circle cx="12" cy="12" r="3.5" fill="#FCE38A"/>
+                    </svg>
+                </h1>
+                <p class="subtitle">SINH VIÊN CÔNG NGHỆ THÔNG TIN</p>
+            </header>
+
+            <!-- Học vấn -->
+            <section class="right-section">
+                <h2><i class="fa-solid fa-graduation-cap"></i> HỌC VẤN</h2>
+                <div class="timeline-item">
+                    <span class="time">2026 - Hiện tại</span>
+                    <h3>Trường Đại học Sư phạm TP. Hồ Chí Minh (HCMUE)</h3>
+                    <p class="role">Sinh viên ngành Công nghệ Thông tin</p>
+                    <p>Học tập và rèn luyện kiến thức nền tảng về lập trình, thiết kế web và ứng dụng công nghệ số.</p>
+                </div>
+            </section>
+
+            <!-- Dự án cá nhân -->
+            <section class="right-section">
+                <h2><i class="fa-solid fa-folder-open"></i> DỰ ÁN CÁ NHÂN</h2>
+                
+                <div class="timeline-item">
+                    <span class="time">2026</span>
+                    <h3>Bài thiết kế Web cuối kỳ môn Thiết kế Web</h3>
+                    <p class="role">Giảng viên hướng dẫn: Thầy Lương Trần Hy Hiến</p>
+                    <p>Xây dựng website hoàn chỉnh tổng hợp kiến thức HTML5, CSS3, bố cục giao diện trực quan và tối ưu trải nghiệm người dùng.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">2026</span>
+                    <h3>Thiết kế Website Hồ Cá</h3>
+                    <p class="role">Bài tập cá nhân - Môn Thiết kế Web</p>
+                    <p>Thiết kế giao diện trang web động hồ cá từ các hình có sắn/ tự tìm kiếm bằng CSS3.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">2026</span>
+                    <h3>Thiết kế Website Cá Nhân (CV Online)</h3>
+                    <p class="role">Bài tập cá nhân - Môn Thiết kế Web</p>
+                    <p>Xây dựng trang CV trực tuyến có sử dụng các ký hiệu đặc biệt, bố cục layout có các thông tin theo yêu cầu của mẫu cho trước.</p>
+                </div>
+            </section>
+
+            <!-- Kinh nghiệm -->
+            <section class="right-section">
+                <h2><i class="fa-solid fa-briefcase"></i> KINH NGHIỆM &amp; KỸ NĂNG THỰC HÀNH</h2>
+                
+                <div class="timeline-item">
+                    <span class="time">Dựng video &amp; Thuyết trình</span>
+                    <h3>Biên tập Clip thuyết trình bằng CapCut &amp; Alight Motion</h3>
+                    <p>Có kinh nghiệm cắt ghép, chèn hiệu ứng chuyển cảnh, keyframe cơ bản và đồng bộ âm thanh để tạo các video thuyết trình thu hút, sinh động.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">Tin học văn phòng</span>
+                    <h3>Thành thạo 3 ứng dụng cơ bản của Microsoft Office</h3>
+                    <p>Sử dụng thành thạo <strong>Word</strong> (soạn thảo, căn chỉnh văn bản chuẩn chỉnh), <strong>PowerPoint</strong> (thiết kế slide thuyết trình thẩm mỹ) và <strong>Excel</strong> (xử lý bảng tính, hàm cơ bản).</p>
+                </div>
+            </section>
+        </main>
     </div>
+
 </body>
 </html>
