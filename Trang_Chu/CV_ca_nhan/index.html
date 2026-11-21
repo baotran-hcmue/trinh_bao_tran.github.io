@@ -6,184 +6,137 @@
     <title>CV Cá Nhân - Trịnh Bảo Trân</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Tinh chỉnh vị trí các sticker hoa và thỏ chibi */
-        .sticker-top-right {
-            position: absolute;
-            top: -18px;
-            right: -12px;
-            width: 130px;
-            pointer-events: none;
-            z-index: 10;
-        }
-        .sticker-bottom-left {
-            position: absolute;
-            bottom: -10px;
-            left: -10px;
-            width: 145px;
-            pointer-events: none;
-            z-index: 10;
-        }
-        .sticker-bottom-right {
-            position: absolute;
-            bottom: -8px;
-            right: -8px;
-            width: 110px;
-            pointer-events: none;
-            z-index: 10;
-        }
-        .sticker-avatar-ears {
-            position: absolute;
-            top: -22px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 56px;
-            pointer-events: none;
-            z-index: 2;
-        }
-        .mini-flower {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 6px;
-            margin-top: -3px;
-        }
-    </style>
 </head>
 <body>
 
     <div class="cv-container">
 
-        <!-- STICKER 1: Góc trên phải - Bé thỏ trắng chibi & hoa đào -->
-        <svg class="sticker-top-right" viewBox="0 0 150 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Bông hoa đào lớn -->
-            <g transform="translate(42, 42)">
-                <circle cx="0" cy="-12" r="9" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.5"/>
-                <circle cx="11" cy="-4" r="9" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.5"/>
-                <circle cx="7" cy="10" r="9" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.5"/>
-                <circle cx="-7" cy="10" r="9" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.5"/>
-                <circle cx="-11" cy="-4" r="9" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.5"/>
-                <circle cx="0" cy="0" r="6" fill="#FFE699" stroke="#7A5252" stroke-width="1.3"/>
-            </g>
-            <!-- Lá xanh -->
-            <ellipse cx="22" cy="52" rx="9" ry="5" transform="rotate(-25 22 52)" fill="#B5E2C3" stroke="#5A7A64" stroke-width="1.4"/>
-            <ellipse cx="64" cy="24" rx="9" ry="5" transform="rotate(20 64 24)" fill="#B5E2C3" stroke="#5A7A64" stroke-width="1.4"/>
+        <!-- STICKER 1: Góc trên phải - Máy ảnh chibi & ngôi sao lấp lánh -->
+        <svg class="sticker-top-right" viewBox="0 0 140 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ngôi sao vàng lấp lánh -->
+            <path d="M25 22 L28 30 L36 33 L28 36 L25 44 L22 36 L14 33 L22 30 Z" fill="#FFE066" stroke="#7A5C38" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M115 15 L117 20 L122 22 L117 24 L115 29 L113 24 L108 22 L113 20 Z" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.2" stroke-linejoin="round"/>
+            <circle cx="42" cy="18" r="2.5" fill="#FFADAD"/>
 
-            <!-- Bé thỏ trắng chibi lấp ló -->
-            <g transform="translate(72, 18)">
-                <!-- Hai tai dài -->
-                <rect x="14" y="0" width="10" height="28" rx="5" transform="rotate(-10 14 0)" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.8"/>
-                <rect x="16.5" y="4" width="5" height="18" rx="2.5" transform="rotate(-10 16.5 4)" fill="#FFB8C6"/>
-                <rect x="32" y="0" width="10" height="28" rx="5" transform="rotate(10 32 0)" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.8"/>
-                <rect x="34.5" y="4" width="5" height="18" rx="2.5" transform="rotate(10 34.5 4)" fill="#FFB8C6"/>
-                <!-- Mặt bánh bao -->
-                <ellipse cx="28" cy="40" rx="22" ry="18" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.8"/>
-                <!-- Mắt tròn long lanh -->
-                <circle cx="20" cy="38" r="2.5" fill="#4A3535"/>
-                <circle cx="19" cy="37" r="0.8" fill="#FFFFFF"/>
-                <circle cx="36" cy="38" r="2.5" fill="#4A3535"/>
-                <circle cx="35" cy="37" r="0.8" fill="#FFFFFF"/>
-                <!-- Miệng chữ w & má hồng -->
-                <path d="M25 42 Q26.5 44 28 42 Q29.5 44 31 42" stroke="#4A3535" stroke-width="1.5" stroke-linecap="round"/>
-                <ellipse cx="15" cy="43" rx="3.8" ry="2.2" fill="#FFA6B8"/>
-                <ellipse cx="41" cy="43" rx="3.8" ry="2.2" fill="#FFA6B8"/>
-                <!-- Hai bàn tay nhỏ -->
-                <ellipse cx="18" cy="56" rx="5.5" ry="4" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.6"/>
-                <ellipse cx="38" cy="56" rx="5.5" ry="4" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.6"/>
+            <!-- Máy ảnh chibi hồng pastel -->
+            <g transform="translate(46, 26) rotate(8)">
+                <!-- Nút chụp & đèn flash -->
+                <rect x="10" y="2" width="12" height="6" rx="2" fill="#FFF3B0" stroke="#5C4444" stroke-width="1.7"/>
+                <rect x="46" y="4" width="10" height="5" rx="2" fill="#A0C4FF" stroke="#5C4444" stroke-width="1.6"/>
+                <!-- Thân máy ảnh -->
+                <rect x="4" y="7" width="62" height="44" rx="12" fill="#FFC2D1" stroke="#5C4444" stroke-width="1.8"/>
+                <rect x="4" y="20" width="62" height="18" fill="#FFE5EC"/>
+                <rect x="4" y="7" width="62" height="44" rx="12" stroke="#5C4444" stroke-width="1.8"/>
+                <!-- Ống kính tròn dễ thương -->
+                <circle cx="35" cy="29" r="14" fill="#FFFFFF" stroke="#5C4444" stroke-width="1.8"/>
+                <circle cx="35" cy="29" r="9.5" fill="#4A4E69" stroke="#5C4444" stroke-width="1.5"/>
+                <circle cx="32" cy="26" r="3" fill="#FFFFFF"/>
+                <circle cx="38" cy="32" r="1.3" fill="#FFFFFF"/>
+                <!-- Má hồng trên thân máy -->
+                <ellipse cx="14" cy="36" rx="3.2" ry="1.8" fill="#FF8FA3"/>
+                <ellipse cx="56" cy="36" rx="3.2" ry="1.8" fill="#FF8FA3"/>
             </g>
         </svg>
 
-        <!-- STICKER 2: Góc dưới trái - Thỏ trắng ôm cà rốt & thỏ nâu -->
-        <svg class="sticker-bottom-left" viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Bông hoa cúc trắng nhỏ -->
-            <g transform="translate(24, 55)">
-                <circle cx="0" cy="-9" r="6" fill="#FFFFFF" stroke="#7A5252" stroke-width="1.3"/>
-                <circle cx="8.5" cy="-3" r="6" fill="#FFFFFF" stroke="#7A5252" stroke-width="1.3"/>
-                <circle cx="5.5" cy="7" r="6" fill="#FFFFFF" stroke="#7A5252" stroke-width="1.3"/>
-                <circle cx="-5.5" cy="7" r="6" fill="#FFFFFF" stroke="#7A5252" stroke-width="1.3"/>
-                <circle cx="-8.5" cy="-3" r="6" fill="#FFFFFF" stroke="#7A5252" stroke-width="1.3"/>
-                <circle cx="0" cy="0" r="4.5" fill="#FFD166" stroke="#7A5252" stroke-width="1.2"/>
-            </g>
-
-            <!-- Bé thỏ trắng mũm mĩm -->
-            <g transform="translate(38, 25)">
-                <rect x="14" y="0" width="9" height="25" rx="4.5" transform="rotate(-8 14 0)" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.8"/>
-                <rect x="16.2" y="4" width="4.5" height="16" rx="2.2" transform="rotate(-8 16.2 4)" fill="#FFB8C6"/>
-                <rect x="30" y="0" width="9" height="25" rx="4.5" transform="rotate(8 30 0)" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.8"/>
-                <rect x="32.2" y="4" width="4.5" height="16" rx="2.2" transform="rotate(8 32.2 4)" fill="#FFB8C6"/>
-                <!-- Thân tròn -->
-                <ellipse cx="26" cy="64" rx="20" ry="18" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.8"/>
-                <!-- Đầu -->
-                <ellipse cx="26" cy="36" rx="20" ry="16" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.8"/>
-                <!-- Mặt -->
-                <circle cx="19" cy="35" r="2.2" fill="#4A3535"/>
-                <circle cx="33" cy="35" r="2.2" fill="#4A3535"/>
-                <path d="M23.5 39 Q25 41 26.5 39 Q28 41 29.5 39" stroke="#4A3535" stroke-width="1.5" stroke-linecap="round"/>
-                <ellipse cx="14" cy="39" rx="3.2" ry="2" fill="#FFA6B8"/>
-                <ellipse cx="38" cy="39" rx="3.2" ry="2" fill="#FFA6B8"/>
-                <!-- Củ cà rốt mini ôm trước bụng -->
-                <path d="M21 56 L31 56 L26 73 Z" fill="#FF9F5A" stroke="#6B4C4C" stroke-width="1.5" stroke-linejoin="round"/>
-                <path d="M26 56 L23 51 M26 56 L29 51" stroke="#68B078" stroke-width="1.8" stroke-linecap="round"/>
-                <!-- Chân -->
-                <ellipse cx="17" cy="81" rx="6.5" ry="3.8" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.6"/>
-                <ellipse cx="35" cy="81" rx="6.5" ry="3.8" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.6"/>
-            </g>
-
-            <!-- Bé thỏ nâu nhỏ ngồi cạnh -->
-            <g transform="translate(96, 42)">
-                <rect x="11" y="0" width="8" height="22" rx="4" transform="rotate(-10 11 0)" fill="#C69474" stroke="#5A3E32" stroke-width="1.7"/>
-                <rect x="24" y="0" width="8" height="22" rx="4" transform="rotate(10 24 0)" fill="#C69474" stroke="#5A3E32" stroke-width="1.7"/>
-                <ellipse cx="21" cy="52" rx="16" ry="14" fill="#C69474" stroke="#5A3E32" stroke-width="1.7"/>
-                <ellipse cx="21" cy="30" rx="16" ry="13" fill="#C69474" stroke="#5A3E32" stroke-width="1.7"/>
-                <circle cx="15" cy="29" r="2" fill="#3D2920"/>
-                <circle cx="27" cy="29" r="2" fill="#3D2920"/>
-                <path d="M19 32.5 Q21 34.5 23 32.5" stroke="#3D2920" stroke-width="1.4" stroke-linecap="round"/>
-                <ellipse cx="11" cy="32.5" rx="2.8" ry="1.8" fill="#F294A5"/>
-                <ellipse cx="31" cy="32.5" rx="2.8" ry="1.8" fill="#F294A5"/>
-                <ellipse cx="14" cy="65" rx="5.5" ry="3.2" fill="#C69474" stroke="#5A3E32" stroke-width="1.6"/>
-                <ellipse cx="28" cy="65" rx="5.5" ry="3.2" fill="#C69474" stroke="#5A3E32" stroke-width="1.6"/>
-            </g>
-        </svg>
-
-        <!-- STICKER 3: Góc dưới phải - Khóm hoa hồng phấn & bé thỏ nằm ngủ -->
-        <svg class="sticker-bottom-right" viewBox="0 0 130 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- STICKER 2: Góc dưới trái - Đôi bạn Thỏ Trắng & Gà Con bên khóm hoa -->
+        <svg class="sticker-bottom-left" viewBox="0 0 185 115" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Bông hoa hồng phấn -->
-            <g transform="translate(32, 78)">
-                <circle cx="0" cy="-10" r="7.5" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="9.5" cy="-3" r="7.5" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="6" cy="8.5" r="7.5" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="-6" cy="8.5" r="7.5" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="-9.5" cy="-3" r="7.5" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="0" cy="0" r="5" fill="#FFE699" stroke="#7A5252" stroke-width="1.2"/>
+            <g transform="translate(22, 65)">
+                <circle cx="0" cy="-8" r="6" fill="#FFD6E0" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="8" cy="-2.5" r="6" fill="#FFD6E0" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="5" cy="7" r="6" fill="#FFD6E0" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="-5" cy="7" r="6" fill="#FFD6E0" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="-8" cy="-2.5" r="6" fill="#FFD6E0" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="0" cy="0" r="4" fill="#FFE066" stroke="#6B4C4C" stroke-width="1.2"/>
             </g>
-            <!-- Bông hoa vàng nhỏ -->
-            <g transform="translate(56, 88) scale(0.75)">
-                <circle cx="0" cy="-10" r="7.5" fill="#FFF2B2" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="9.5" cy="-3" r="7.5" fill="#FFF2B2" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="6" cy="8.5" r="7.5" fill="#FFF2B2" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="-6" cy="8.5" r="7.5" fill="#FFF2B2" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="-9.5" cy="-3" r="7.5" fill="#FFF2B2" stroke="#7A5252" stroke-width="1.4"/>
-                <circle cx="0" cy="0" r="5" fill="#FFAD7A" stroke="#7A5252" stroke-width="1.2"/>
+            <ellipse cx="15" cy="80" rx="7" ry="3.5" transform="rotate(-25 15 80)" fill="#B5E2C3" stroke="#5A7A64" stroke-width="1.2"/>
+
+            <!-- Bé thỏ trắng chibi -->
+            <g transform="translate(36, 22)">
+                <rect x="13" y="0" width="8.5" height="24" rx="4.2" transform="rotate(-8 13 0)" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.7"/>
+                <rect x="15.2" y="4" width="4" height="15" rx="2" transform="rotate(-8 15.2 4)" fill="#FFB8C6"/>
+                <rect x="28" y="0" width="8.5" height="24" rx="4.2" transform="rotate(8 28 0)" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.7"/>
+                <rect x="30.2" y="4" width="4" height="15" rx="2" transform="rotate(8 30.2 4)" fill="#FFB8C6"/>
+                <!-- Thân & đầu -->
+                <ellipse cx="25" cy="62" rx="18" ry="16" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.7"/>
+                <ellipse cx="25" cy="35" rx="19" ry="15" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.7"/>
+                <!-- Mặt -->
+                <circle cx="18.5" cy="34" r="2.1" fill="#4A3535"/>
+                <circle cx="31.5" cy="34" r="2.1" fill="#4A3535"/>
+                <path d="M22.5 37.5 Q24 39.5 25 37.5 Q26 39.5 27.5 37.5" stroke="#4A3535" stroke-width="1.4" stroke-linecap="round"/>
+                <ellipse cx="14" cy="38" rx="3" ry="1.8" fill="#FFA6B8"/>
+                <ellipse cx="36" cy="38" rx="3" ry="1.8" fill="#FFA6B8"/>
+                <!-- Chân -->
+                <ellipse cx="17" cy="77" rx="6" ry="3.5" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.6"/>
+                <ellipse cx="33" cy="77" rx="6" ry="3.5" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.6"/>
             </g>
-            <!-- Bé thỏ trắng cuộn tròn ngủ ngon -->
-            <g transform="translate(56, 38)">
-                <rect x="28" y="8" width="22" height="8" rx="4" transform="rotate(-12 28 8)" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.7"/>
-                <rect x="30" y="10" width="15" height="4" rx="2" transform="rotate(-12 30 10)" fill="#FFB8C6"/>
-                <ellipse cx="28" cy="36" rx="23" ry="16" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.7"/>
-                <circle cx="18" cy="28" r="14" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.7"/>
-                <!-- Mắt nhắm ngủ cong cong -->
-                <path d="M10 27 Q13 30 16 27" stroke="#4A3535" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M20 27 Q23 30 26 27" stroke="#4A3535" stroke-width="1.5" stroke-linecap="round"/>
-                <ellipse cx="11" cy="31" rx="2.8" ry="1.8" fill="#FFA6B8"/>
-                <ellipse cx="25" cy="31" rx="2.8" ry="1.8" fill="#FFA6B8"/>
-                <!-- Đuôi bông tròn -->
-                <circle cx="52" cy="35" r="5.5" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.6"/>
+
+            <!-- Bé gà con vàng ươm đứng cạnh -->
+            <g transform="translate(88, 44)">
+                <!-- Chỏm lông trên đầu -->
+                <path d="M18 8 Q16 1 21 5 Q23 0 25 6" stroke="#7A5C38" stroke-width="1.6" stroke-linecap="round"/>
+                <!-- Thân gà tròn vo -->
+                <ellipse cx="22" cy="32" rx="18" ry="17" fill="#FFE66D" stroke="#7A5C38" stroke-width="1.7"/>
+                <!-- Cánh nhỏ -->
+                <path d="M35 28 Q42 32 36 38" fill="#FFD13B" stroke="#7A5C38" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Mắt, mỏ cam & má hồng -->
+                <circle cx="15" cy="26" r="2" fill="#4A3525"/>
+                <circle cx="27" cy="26" r="2" fill="#4A3525"/>
+                <polygon points="19,29 24,29 21.5,33" fill="#FF9F1C" stroke="#7A5C38" stroke-width="1.2" stroke-linejoin="round"/>
+                <ellipse cx="11" cy="30" rx="2.8" ry="1.7" fill="#FF9EAA"/>
+                <ellipse cx="31" cy="30" rx="2.8" ry="1.7" fill="#FF9EAA"/>
+                <!-- Chân gà -->
+                <path d="M17 48 L17 54 M14 54 L20 54" stroke="#FF9F1C" stroke-width="2" stroke-linecap="round"/>
+                <path d="M27 48 L27 54 M24 54 L30 54" stroke="#FF9F1C" stroke-width="2" stroke-linecap="round"/>
             </g>
+
+            <!-- Ngôi sao nhỏ -->
+            <path d="M138 68 L140 73 L145 75 L140 77 L138 82 L136 77 L131 75 L136 73 Z" fill="#FFE066" stroke="#7A5C38" stroke-width="1.2"/>
+        </svg>
+
+        <!-- STICKER 3: Góc dưới phải - Bé gà con đội hoa & ngôi sao -->
+        <svg class="sticker-bottom-right" viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bông hoa trắng -->
+            <g transform="translate(26, 75)">
+                <circle cx="0" cy="-8" r="6" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="8" cy="-2.5" r="6" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="5" cy="7" r="6" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="-5" cy="7" r="6" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="-8" cy="-2.5" r="6" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.3"/>
+                <circle cx="0" cy="0" r="4" fill="#FFD166" stroke="#6B4C4C" stroke-width="1.2"/>
+            </g>
+
+            <!-- Bé gà con ngồi vui vẻ -->
+            <g transform="translate(48, 34)">
+                <ellipse cx="24" cy="34" rx="20" ry="18" fill="#FFE66D" stroke="#7A5C38" stroke-width="1.7"/>
+                <!-- Bông hoa nhỏ đội trên đầu gà -->
+                <g transform="translate(24, 15) scale(0.65)">
+                    <circle cx="0" cy="-7" r="5.5" fill="#FFC2D1" stroke="#6B4C4C" stroke-width="1.3"/>
+                    <circle cx="7" cy="-2" r="5.5" fill="#FFC2D1" stroke="#6B4C4C" stroke-width="1.3"/>
+                    <circle cx="4.5" cy="6" r="5.5" fill="#FFC2D1" stroke="#6B4C4C" stroke-width="1.3"/>
+                    <circle cx="-4.5" cy="6" r="5.5" fill="#FFC2D1" stroke="#6B4C4C" stroke-width="1.3"/>
+                    <circle cx="-7" cy="-2" r="5.5" fill="#FFC2D1" stroke="#6B4C4C" stroke-width="1.3"/>
+                    <circle cx="0" cy="0" r="3.5" fill="#FFFFFF"/>
+                </g>
+                <!-- Mắt cười cong cong -->
+                <path d="M14 29 Q17 26 20 29" stroke="#4A3525" stroke-width="1.7" stroke-linecap="round"/>
+                <path d="M28 29 Q31 26 34 29" stroke="#4A3525" stroke-width="1.7" stroke-linecap="round"/>
+                <polygon points="21.5,31 26.5,31 24,35" fill="#FF9F1C" stroke="#7A5C38" stroke-width="1.2" stroke-linejoin="round"/>
+                <ellipse cx="13" cy="33" rx="3" ry="1.8" fill="#FF9EAA"/>
+                <ellipse cx="35" cy="33" rx="3" ry="1.8" fill="#FF9EAA"/>
+                <!-- Cánh vẫy -->
+                <path d="M5 32 Q0 26 6 24" fill="#FFD13B" stroke="#7A5C38" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M43 32 Q48 26 42 24" fill="#FFD13B" stroke="#7A5C38" stroke-width="1.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Ngôi sao nhỏ góc phải -->
+            <path d="M98 22 L100 28 L106 30 L100 32 L98 38 L96 32 L90 30 L96 28 Z" fill="#FFE066" stroke="#7A5C38" stroke-width="1.3"/>
         </svg>
 
         <!-- CỘT TRÁI (Tỉ lệ 40%) -->
         <aside class="left-column">
+            <!-- Ảnh đại diện hình tròn + Tai thỏ chibi lấp ló -->
             <div class="avatar-box">
-                <!-- Đôi tai thỏ chibi trên khung ảnh -->
                 <svg class="sticker-avatar-ears" viewBox="0 0 70 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="16" y="4" width="11" height="28" rx="5.5" transform="rotate(-14 16 4)" fill="#FFFFFF" stroke="#6B4C4C" stroke-width="1.8"/>
                     <rect x="18.8" y="8" width="5.5" height="18" rx="2.7" transform="rotate(-14 18.8 8)" fill="#FFB8C6"/>
@@ -197,7 +150,7 @@
             <section class="left-section">
                 <h2>
                     GIỚI THIỆU
-                    <svg class="mini-flower" width="18" height="18" viewBox="0 0 24 24">
+                    <svg class="mini-deco" width="18" height="18" viewBox="0 0 24 24">
                         <circle cx="12" cy="5" r="4.2" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.1"/>
                         <circle cx="18.5" cy="10" r="4.2" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.1"/>
                         <circle cx="16" cy="17.5" r="4.2" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.1"/>
@@ -244,7 +197,12 @@
 
             <!-- Sở thích -->
             <section class="left-section">
-                <h2>SỞ THÍCH</h2>
+                <h2>
+                    SỞ THÍCH
+                    <svg class="mini-deco" width="16" height="16" viewBox="0 0 24 24">
+                        <path d="M12 2 L14.8 9 L22 12 L14.8 15 L12 22 L9.2 15 L2 12 L9.2 9 Z" fill="#FFE066" stroke="#7A5C38" stroke-width="1.3"/>
+                    </svg>
+                </h2>
                 <div class="hobbies">
                     <span><i class="fa-solid fa-laptop-code"></i> Công nghệ</span>
                     <span><i class="fa-solid fa-camera-retro"></i> Chụp ảnh</span>
@@ -259,13 +217,8 @@
             <header class="header-box">
                 <h1>
                     TRỊNH BẢO TRÂN
-                    <svg class="mini-flower" width="22" height="22" viewBox="0 0 24 24">
-                        <circle cx="12" cy="5" r="4.2" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.1"/>
-                        <circle cx="18.5" cy="10" r="4.2" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.1"/>
-                        <circle cx="16" cy="17.5" r="4.2" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.1"/>
-                        <circle cx="8" cy="17.5" r="4.2" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.1"/>
-                        <circle cx="5.5" cy="10" r="4.2" fill="#FFD6E0" stroke="#7A5252" stroke-width="1.1"/>
-                        <circle cx="12" cy="12" r="3.4" fill="#FFE699"/>
+                    <svg class="mini-deco" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M12 2 L14.8 9 L22 12 L14.8 15 L12 22 L9.2 15 L2 12 L9.2 9 Z" fill="#FFE066" stroke="#7A5C38" stroke-width="1.3"/>
                     </svg>
                 </h1>
                 <p class="subtitle">SINH VIÊN CÔNG NGHỆ THÔNG TIN</p>
